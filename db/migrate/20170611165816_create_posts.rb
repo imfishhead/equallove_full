@@ -1,6 +1,6 @@
-class CreateArticles < ActiveRecord::Migration
+class CreatePosts < ActiveRecord::Migration
   def change
-    create_table :articles do |t|
+    create_table :posts do |t|
     	t.string :title
     	t.text :description
     	t.text :content
@@ -8,7 +8,7 @@ class CreateArticles < ActiveRecord::Migration
     	t.string :main_pic
     	t.string :video
     	t.integer :category_id
-    	t.string :type # Question, Video, nil
+    	t.string :type # Question, Video, Article
 
       t.timestamps null: false
     end
