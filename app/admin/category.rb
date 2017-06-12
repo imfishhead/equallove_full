@@ -32,6 +32,7 @@ permit_params :id, :title, :parent_id, :on, sub_categories_attributes: [:id, :ti
 	end
 
   form do |f|
+  	f.semantic_errors *f.object.errors.keys
     f.inputs "分類" do
       f.input :title
       f.input :on

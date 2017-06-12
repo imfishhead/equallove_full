@@ -25,7 +25,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem 'activeadmin', github: 'activeadmin'
 gem 'active_skin'
-
+gem 'select2-rails'
+gem 'activeadmin-select2', github: 'mfairburn/activeadmin-select2'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
