@@ -1,0 +1,2 @@
+class Question < Post
+end

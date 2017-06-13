@@ -1,4 +1,4 @@
-ActiveAdmin.register Post do
+ActiveAdmin.register Article do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
@@ -23,9 +23,9 @@ permit_params :title,
 
   form do |f|
   	f.semantic_errors *f.object.errors.keys
-    f.inputs "分類" do
+    f.inputs "文章 - 圖文" do
       f.input :title
-      f.input :category, as: :select2, include_blank: false
+      f.input :category, as: :select2, include_blank: false, collection: Category.is_main
       f.input :pinned
       f.input :on
       f.input :video
