@@ -31,7 +31,7 @@ permit_params :title,
       f.input :video
       f.input :main_pic
       f.input :description
-      f.input :content
+      f.input :content, as: :ckeditor
     end
     f.actions
   end

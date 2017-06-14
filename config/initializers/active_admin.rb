@@ -155,6 +155,8 @@ ActiveAdmin.setup do |config|
   #
   config.localize_format = :long
 
+  config.register_javascript 'ckeditor/init.js'
+
   # == Setting a Favicon
   #
   # config.favicon = 'favicon.ico'
