@@ -66,18 +66,20 @@ permit_params :title,
   form do |f|
   	f.semantic_errors *f.object.errors.keys
     f.inputs "文章 - 圖文" do
-      f.input :admin_user_id, as: :select2, collection: AdminUser.all, member_label: Proc.new { |x| "#{x.name}(#{x.email})" }, include_blank: false
+      f.input :admin_user_id,
+                  as: :select2,
+                  collection: AdminUser.all,
+                  member_label: Proc.new { |x| "#{x.name}(#{x.email})" },
+                  include_blank: false,
+                  default: current_admin_user.id
       f.input :title
       f.input :category, as: :select2, include_blank: false, collection: Category.is_main
       f.input :pinned
       f.input :on
-      f.input :video, placeholder: "請輸入影片 youtube 網址"
-      f.inputs "文章圖片", multipart: true do
-        f.input :main_pic, as: :file, hint: f.object.main_pic.present? \
-          ? image_tag(f.object.main_pic.url(:regular))
-          : content_tag(:span, "no main_pic page yet")
-        f.input :main_pic_cache, as: :hidden
-      end
+      # f.input :main_pic, as: :file, hint: f.object.main_pic.present? \
+      #   ? image_tag(f.object.main_pic.url(:regular))
+      #   : content_tag(:span, "no main_pic page yet")
+      # f.input :main_pic_cache, as: :hidden
       f.input :description, placeholder: "文章簡介，最多 50 字", maxlength: 50
       f.input :content, as: :ckeditor
     end
