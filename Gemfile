@@ -33,7 +33,7 @@ gem 'activeadmin-select2', github: 'mfairburn/activeadmin-select2'
 gem 'carrierwave', '~> 1.0'
 gem "ckeditor"
 gem "mini_magick"
-
+gem "fog-aws"
 # Use Unicorn as the app server
 # gem 'unicorn'
 
