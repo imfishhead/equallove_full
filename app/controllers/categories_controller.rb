@@ -10,6 +10,8 @@ class CategoriesController < ApplicationController
   # GET /categories/1
   # GET /categories/1.json
   def show
+    @categories = Category.is_main.on
+    @has_subjects = @category.sub_categories.present?
   end
 
   # GET /categories/new

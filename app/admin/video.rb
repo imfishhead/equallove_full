@@ -75,6 +75,7 @@ permit_params :title,
         ? image_tag(f.object.main_pic.url(:regular))
         : content_tag(:span, "no main_pic page yet")
       f.input :main_pic_cache, as: :hidden
+      f.input :description
     end
     f.actions
   end

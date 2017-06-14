@@ -27,6 +27,7 @@ permit_params :title,
     end
     column :title
     column :on
+    column :description
     column :content do |article|
       article.content.truncate(50)
     end
@@ -46,6 +47,7 @@ permit_params :title,
           end
           row :title
           row :on
+          row :description
           row :content do |article|
             article.content
           end
@@ -66,6 +68,7 @@ permit_params :title,
       f.input :title
       f.input :category, as: :select2, include_blank: false, collection: Category.is_subject, input_html: { style: "width: 200px;" }
       f.input :on
+      f.input :description
       f.input :content
     end
     f.actions

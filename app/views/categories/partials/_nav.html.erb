@@ -1,14 +1,13 @@
 <nav id="nav">
   <div class="nav-left flex-jfs-ac-">
     <div class="logo">
-      <img src="/assets/img/common/logo_h.svg" alt="">
+      <%= image_tag "common/logo_h.svg" %>
     </div>
   </div>
   <div class="nav-right flex-ac-jc-">
-    <a href="" target="_blank" class="active">最新消息</a>
-    <a href="" target="_blank">新聞稿</a>
-    <a href="" target="_blank">闢搖專區</a>
-    <a href="" target="_blank">影音記錄</a>
-    <a href="" target="_blank">了解婚姻平權</a>
+    <% @categories.find_each do |category| %>
+    <!-- 輪每一個分類，如果是現在這個頁面的就打 active  -->
+      <%= link_to category.title, category_path(category), class: is_active(category) %>
+    <% end %>
   </div>
 </nav>
