@@ -10,7 +10,6 @@ permit_params :title,
 							:video,
 							:category_id,
 							:type,
-							:pinned
 #
 # or
 #
@@ -31,7 +30,6 @@ permit_params :title,
                   default: current_admin_user.id
       f.input :title
       f.input :category, as: :select2, include_blank: false, collection: Category.is_subject
-      f.input :pinned
       f.input :on
       f.input :main_pic, as: :file, hint: f.object.main_pic.present? \
         ? image_tag(f.object.main_pic.url(:regular))
