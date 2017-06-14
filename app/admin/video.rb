@@ -9,7 +9,7 @@ permit_params :title,
 							:main_pic,
 							:video,
 							:category_id,
-							:type,
+							:type
 #
 # or
 #
@@ -19,9 +19,48 @@ permit_params :title,
 #   permitted
 # end
 
+  index do |video|
+    column :id
+    column :category
+    column :main_pic do |video|
+      image_tag video.main_pic.url("regular"), style: "width: 100px; height: auto;"
+    end
+    column :admin_user do |video|
+      video.admin_user.try(:name)
+    end
+    column :title
+    column :description
+    column :on
+    column :video
+    actions default: true
+  end
+
+
+  show do
+    columns do
+      column span: 4 do
+        h1 "影片檢視"
+        attributes_table  do
+          row :id
+          row :category
+          row :main_pic do |video|
+            image_tag video.main_pic.url('regular')
+          end
+          row :admin_user do |video|
+            video.admin_user.try(:name)
+          end
+          row :title
+          row :description
+          row :on
+          row :video
+        end
+      end
+    end
+  end
+
   form do |f|
   	f.semantic_errors *f.object.errors.keys
-    f.inputs "文章 - 影片" do
+    f.inputs "影片" do
       f.input :admin_user_id,
                   as: :select2,
                   collection: AdminUser.all,
@@ -29,7 +68,7 @@ permit_params :title,
                   include_blank: false,
                   default: current_admin_user.id
       f.input :title
-      f.input :category, as: :select2, include_blank: false, collection: Category.is_main
+      f.input :category, as: :select2, include_blank: false, collection: Category.is_main, input_html: { style: "width: 200px;" }
       f.input :on
       f.input :video, placeholder: "請輸入影片 youtube 網址"
       f.input :main_pic, as: :file, hint: f.object.main_pic.present? \

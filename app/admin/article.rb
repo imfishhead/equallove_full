@@ -24,16 +24,19 @@ permit_params :title,
 
   index do |article|
     column :id
+    column :category
     column :main_pic do |article|
-      article.main_pic.url("regular")
+      image_tag article.main_pic.url("regular"), style: "width: 100px; height: auto;"
     end
-    column :user do |article|
-      article.user.try(:name)
+    column :admin_user do |article|
+      article.admin_user.try(:name)
     end
     column :title
     column :description
     column :on
-    column :content
+    column :content do |article|
+      article.content.truncate(50)
+    end
     column :video
     column :pinned
     actions default: true
@@ -46,10 +49,13 @@ permit_params :title,
         h1 "文章檢視"
         attributes_table  do
           row :id
+          row :category
           row :main_pic do |article|
             image_tag article.main_pic.url('regular')
           end
-          row :user
+          row :admin_user do |article|
+            article.admin_user.try(:name)
+          end
           row :title
           row :description
           row :on
@@ -65,7 +71,7 @@ permit_params :title,
 
   form do |f|
   	f.semantic_errors *f.object.errors.keys
-    f.inputs "文章 - 圖文" do
+    f.inputs "圖文文章" do
       f.input :admin_user_id,
                   as: :select2,
                   collection: AdminUser.all,
@@ -73,14 +79,14 @@ permit_params :title,
                   include_blank: false,
                   default: current_admin_user.id
       f.input :title
-      f.input :category, as: :select2, include_blank: false, collection: Category.is_main
+      f.input :category, as: :select2, include_blank: false, collection: Category.is_main, input_html: { style: "width: 180px;" }
       f.input :pinned
       f.input :on
       # f.input :main_pic, as: :file, hint: f.object.main_pic.present? \
       #   ? image_tag(f.object.main_pic.url(:regular))
       #   : content_tag(:span, "no main_pic page yet")
       # f.input :main_pic_cache, as: :hidden
-      f.input :description, placeholder: "文章簡介，最多 50 字", maxlength: 50
+      f.input :description, placeholder: "文章簡介，最多 50 字", input_html: { maxlength: 50 }
       f.input :content, as: :ckeditor
     end
     f.actions

@@ -5,11 +5,11 @@ ActiveAdmin.register Question do
 permit_params :title,
               :admin_user_id,
 							:description,
+              :content,
 							:on,
 							:main_pic,
-							:video,
 							:category_id,
-							:type,
+							:type
 #
 # or
 #
@@ -19,9 +19,44 @@ permit_params :title,
 #   permitted
 # end
 
+  index do |article|
+    column :id
+    column :category
+    column :admin_user do |article|
+      article.admin_user.try(:name)
+    end
+    column :title
+    column :on
+    column :content do |article|
+      article.content.truncate(50)
+    end
+    actions default: true
+  end
+
+
+  show do
+    columns do
+      column span: 4 do
+        h1 "問與答檢視"
+        attributes_table  do
+          row :id
+          row :category
+          row :admin_user do |article|
+            article.admin_user.try(:name)
+          end
+          row :title
+          row :on
+          row :content do |article|
+            article.content
+          end
+        end
+      end
+    end
+  end
+
   form do |f|
   	f.semantic_errors *f.object.errors.keys
-    f.inputs "Q&A" do
+    f.inputs "問與答" do
       f.input :admin_user_id,
                   as: :select2,
                   collection: AdminUser.all,
@@ -29,13 +64,8 @@ permit_params :title,
                   include_blank: false,
                   default: current_admin_user.id
       f.input :title
-      f.input :category, as: :select2, include_blank: false, collection: Category.is_subject
+      f.input :category, as: :select2, include_blank: false, collection: Category.is_subject, input_html: { style: "width: 200px;" }
       f.input :on
-      f.input :main_pic, as: :file, hint: f.object.main_pic.present? \
-        ? image_tag(f.object.main_pic.url(:regular))
-        : content_tag(:span, "no main_pic page yet")
-      f.input :main_pic_cache, as: :hidden
-      f.input :description, placeholder: "文章簡介，最多 50 字", maxlength: 50
       f.input :content
     end
     f.actions
