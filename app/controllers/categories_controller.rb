@@ -10,7 +10,8 @@ class CategoriesController < ApplicationController
   # GET /categories/1
   # GET /categories/1.json
   def show
-    @categories = Category.is_main.on
+    redirect_to root_path unless @category.on?
+    @categories = Category.on.is_main
     @has_subjects = @category.sub_categories.present?
   end
 

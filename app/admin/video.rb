@@ -7,6 +7,7 @@ permit_params :title,
 							:description,
 							:on,
 							:main_pic,
+              :main_pic_cache,
 							:video,
 							:category_id,
 							:type

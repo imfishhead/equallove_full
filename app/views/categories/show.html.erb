@@ -6,7 +6,7 @@
 
       <% if @has_subjects %><!-- 如果有次分類的話就兩個 for 回圈顯示次分類以及底下的文章 -->
         <!-- sub_categories 是次分類  -->
-        <% @category.sub_categories.find_each do |sub_c| %>
+        <% @category.sub_categories.on.find_each do |sub_c| %>
         <h5><%= sub_c.title %></h5>
           <div class="articles flex-l3-m2-s1-jfs-afs-">
             <!-- 這裡 for each 次分類底下的文章 -->

@@ -8,6 +8,7 @@ permit_params :title,
               :content,
 							:on,
 							:main_pic,
+              :main_pic_cache,
 							:category_id,
 							:type
 #
@@ -19,17 +20,20 @@ permit_params :title,
 #   permitted
 # end
 
-  index do |article|
+  index do |question|
     column :id
     column :category
-    column :admin_user do |article|
-      article.admin_user.try(:name)
+    column :admin_user do |question|
+      question.admin_user.try(:name)
     end
     column :title
     column :on
+    column :main_pic do |question|
+      image_tag question.main_pic.url('regular')
+    end
     column :description
-    column :content do |article|
-      article.content.truncate(50)
+    column :content do |question|
+      question.content.truncate(50)
     end
     actions default: true
   end
@@ -42,14 +46,17 @@ permit_params :title,
         attributes_table  do
           row :id
           row :category
-          row :admin_user do |article|
-            article.admin_user.try(:name)
+          row :main_pic do |question|
+            image_tag question.main_pic.url('regular')
+          end
+          row :admin_user do |question|
+            question.admin_user.try(:name)
           end
           row :title
           row :on
           row :description
-          row :content do |article|
-            article.content
+          row :content do |question|
+            question.content
           end
         end
       end
@@ -68,6 +75,10 @@ permit_params :title,
       f.input :title
       f.input :category, as: :select2, include_blank: false, collection: Category.is_subject, input_html: { style: "width: 200px;" }
       f.input :on
+      f.input :main_pic, as: :file, hint: f.object.main_pic.present? \
+        ? image_tag(f.object.main_pic.url(:regular))
+        : content_tag(:span, "no main_pic page yet")
+      f.input :main_pic_cache, as: :hidden
       f.input :description
       f.input :content
     end

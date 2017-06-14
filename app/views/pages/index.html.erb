@@ -7,11 +7,12 @@
       <span>給你滿滿的同婚知識</span>
       <div class="og-btn">了解修法</div>
     </div>
-    <a href="" target="_blank">
-      11、12月活動財務報告
+    <a href="https://drive.google.com/open?id=0Bz11paeM280TRmh6c0FZM01ObkU" target="_blank">
+      各月份財務報告
     </a>
   </div>
   <div class="header-right">
+    <!-- 置頂的文章 -->
     <% @pinned_articles.find_each do |article| %>
     <div style="background-image: url('<%= article.main_pic.url("regular") %>');" class="post-block img-bg-cover">
       <div class="mask"></div>
@@ -107,7 +108,7 @@
     </div>
     <div class="s2-more">
       <span>我們還有更多精彩文章</span>
-      <div class="og-btn">閱讀所有文章</div>
+      <%= link_to "閱讀所有文章", category_path(Category.first), class: "og-btn" %>
     </div>
   </div>
 </section>
