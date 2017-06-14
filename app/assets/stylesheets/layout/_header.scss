@@ -24,7 +24,7 @@ header {
 	.header-left {
 		position: relative;
 		margin-right: 2px;
-		background-image: url('../img/main/彩虹點亮台灣.jpg');
+		background-image: url(asset_path("main/rainbow-light-up-taiwan.jpg"));
 		color: #fff;
 		@media screen and (max-width: 992px) {
 			padding: 25px 0 30px;
@@ -57,7 +57,7 @@ header {
 	}
 
 	.header-left-content {
-		max-height: 100%;	
+		max-height: 100%;
 		text-align: center;
 	}
 
