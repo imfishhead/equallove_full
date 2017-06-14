@@ -51,7 +51,8 @@ zh-TW:
         category_id: 分類 id
         created_at: 建立時間
         updated_at: 更新時間
-        pinned: 置頂
+        pinned: 置頂（首頁最上面）
+        front_page_pinned: 每個分類置頂
   active_admin:
     dashboard: 儀表板
     dashboard_welcome:

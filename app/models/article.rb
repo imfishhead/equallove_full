@@ -7,7 +7,6 @@ class Article < Post
             :on,
             :main_pic,
             :category_id,
-            :pinned,
             presence: true
 
   scope :pinned, -> { where(pinned: true) }

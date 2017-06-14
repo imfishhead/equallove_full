@@ -38,11 +38,9 @@
     </div>
   </div>
   <div class="nav-right flex-ac-jc-">
-    <a href="" target="_blank">最新消息</a>
-    <a href="" target="_blank">了解婚姻平權</a>
-    <a href="" target="_blank">闢搖專區</a>
-    <a href="" target="_blank">如何支持</a>
-    <a href="" target="_blank">名人支持</a>
+    <% @categories.find_each do |category| %>
+      <%= link_to category.title, category_path(category), target: "_blank" %>
+    <% end %>
   </div>
 </nav>
 
@@ -287,25 +285,28 @@
   <div class="content">
     <h2>了解更多，或許你不會這麼擔心</h2>
     <!-- 一個 QA -->
+    <% @sub_categories.find_each do |category| %>
     <h3>
-      { 議題一：為什麼修法爭議這麼大？ }
-      <div>共<span>8</span>篇文章<a href="">閱讀全部</a></div>
+      <%= category.title %>
+      <div>
+        共<span><%= category.questions.size %></span>篇文章
+        <%= link_to "閱讀全部", category_path(category), target: "_blank" %>
+      </div>
     </h3>
     <div class="s4-faqs flex-l3-m2-s1-jfs-nw-">
+      <% category.questions.find_each do |question| %>
       <div class="s4-faq reveal">
         <h4>
-          { Q1：同性婚姻涉及民法的婚姻家庭結構改變，一定要全民公投後才可以修法？ }
+          <%= question.title %>
         </h4>
         <p>
-          { A：不需要。有些團體表示，因為民法中婚姻家庭的制度涉及社會的根本結構，所以修改民法，不能只透過立法院的審議立法就來改變，而必須透過直接民主的全民公投來決定。但是回顧台灣民法修正的歴史，民法中的婚姻家庭制度，正是在大法官憲法解釋與立法院修法的協力下，透過立法院審議、逐次修改，才變成今日這部更平等且保護所有人的法律。<br><br>
-
-          1920年，民法親屬編在中國制定公布；而後為了因應台灣社會的變遷以及遵守憲法裡對於性別平等的保障，從1985年開始，民法親屬編在立法院進行了數次的重大修正：將原先夫優先於妻的法律條款，修改為夫妻在法律上互相平等尊重協商的制度；父優先於母的法律條款，也被尊重「子女最佳利益」的原則所替代。這些攸關台灣婚姻家庭制度的變革，都是透過立法，而非公投。<br><br>
-
-          況且在 2016 年，信心希望聯盟（下稱信望盟）就曾經發起「婚姻家庭制度為社會形成與發展之重要基礎，未經公投通過不得修法」此一主張的公投連署，也已被行政院公投審議委員會以 10:1 的懸殊票數認定不符公投法規定，駁回信望盟的提案。駁回理由中也明確提到，此一主文提案，並非立法原則的創制，也不符合公投法一案一事項的規定。<br> }
+          <%= question.content %>
         </p>
         <div class="s4-faq-more-btn">閱讀更多</div>
       </div>
+      <% end %>
     </div>
+    <% end %>
     <!-- </template> -->
   </div>
 </section>

@@ -12,6 +12,7 @@ permit_params :title,
 							:video,
 							:category_id,
 							:type,
+              :front_page_pinned,
 							:pinned
 #
 # or
@@ -38,6 +39,7 @@ permit_params :title,
       article.content.truncate(50)
     end
     column :video
+    column :front_page_pinned
     column :pinned
     actions default: true
   end
@@ -63,6 +65,7 @@ permit_params :title,
             raw(article.content)
           end
           row :video
+          row :front_page_pinned
           row :pinned
         end
       end
@@ -81,6 +84,7 @@ permit_params :title,
       f.input :title
       f.input :category, as: :select2, include_blank: false, collection: Category.is_main, input_html: { style: "width: 180px;" }
       f.input :pinned
+      f.input :front_page_pinned
       f.input :on
       f.input :main_pic, as: :file, hint: f.object.main_pic.present? \
         ? image_tag(f.object.main_pic.url(:regular))
