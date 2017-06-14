@@ -1,0 +1,33 @@
+.sec5 {
+	min-height: 0;
+}
+
+.content {
+	a {
+	  color: #3b92f5;
+	}
+
+	h2 {
+		margin-bottom: 50px;
+	}
+
+	.support-box {
+		max-width: 400px;
+		margin: 30px auto;
+		display: flex;
+		align-items: center;
+
+		img {
+			flex: 0 0 30px;
+			width: 30px;
+			height: auto;
+		}
+
+		p {
+			flex: 1 1 calc( 100% - 70px );
+			width: calc( 100% - 100px );
+			margin-top: 0;
+			margin-left: 70px;
+		}
+	}
+}

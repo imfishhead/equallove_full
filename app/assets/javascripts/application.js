@@ -10,7 +10,12 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require font
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
-//= require_tree .
+//= require scrollreveal/scrollreveal.min
+//= require headroom/headroom
+//= require headroom/jQuery.headroom
+//= require animateNumber
+//= require aboutScroll
+//= require index

@@ -6,10 +6,11 @@ class Article < Post
             :content,
             :on,
             :main_pic,
-            :video,
             :category_id,
             :pinned,
             presence: true
+
+  scope :pinned, -> { where(pinned: true) }
 
   def check_only_two_pinned
     Article.pinned.order(updated_at: :desc).first.update(pinned: false) if Article.pinned.size > 2

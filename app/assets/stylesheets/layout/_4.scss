@@ -1,0 +1,125 @@
+.sec4 {
+
+	.content {
+		padding: 8% 2.5%;
+		max-width: 1280px;
+
+		h2 {
+			margin-bottom: 50px;
+		}
+	}
+}
+.sec4 h3 {
+	position: relative;
+	color: #444444;
+	margin-top: 28px;
+	font-size: 28px;
+	margin-bottom: 	10px;
+	padding-bottom: 10px;
+	box-shadow: 0 1px 0 0 rgba(0,0,0,.1);
+
+	div {
+		position: absolute;
+		font-size: 15px;
+		right: 10px;
+		bottom: 10px;
+		color: #444444;
+		opacity: .8;
+
+		span {
+			font-size: 15px;
+			margin: 0 7px;
+		}
+
+		a {
+			margin-left: 15px;
+			color: $r1;
+		}
+	}
+}
+
+  // <div>共<span>8</span>篇文章<a href="">閱讀全部</a></div>
+
+
+.s4-faqs {
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+.s4-faqs::-webkit-scrollbar {
+  height: 2px;
+  width: 0;
+}
+ 
+.s4-faqs::-webkit-scrollbar-track {
+  background-color: rgba(0,0,0,.05);
+}
+ 
+.s4-faqs::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,.05);
+  border-radius: 5px;
+}
+
+.s4-faq h4 {
+	font-size: 18px;
+	margin-top: 0;
+	height: 50px;
+	overflow: hidden;
+}
+.s4-faq {
+	position: relative;
+	padding: 15px 20px 45px;
+  border-radius: 6px;
+  background-color: #ffffff;
+  border: solid 1px #d7d7d7;
+	a {
+	  color: #3b92f5;
+	}
+}
+.s4-faq p {
+	position: relative;
+	padding-left: 20px;
+	font-size: 15px;
+	height: 80px;
+	overflow: hidden;
+	margin-top: 10px;
+	text-overflow : ellipsis;
+	color: rgba(0,0,0,.69);
+	&:before {
+		content: '';
+		position: absolute;
+		height: 100%;
+		width: 6px;
+		left: 0;
+		top: 0;
+		border-radius: 40px;
+		background-color: #e8e8e8;
+		z-index: 2;
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		box-shadow: inset 0 -40px 30px -15px rgba(255,255,255,.8);
+		z-index: 1;
+	}
+}
+.s4-faq-more-btn {
+	position: absolute;
+	color: #ff9f00;
+	bottom: 15px;
+	left: 0;
+	right: 0;
+	width: 120px;
+	line-height: 30px;
+	border-radius: 30px;
+	margin: 10px auto 0;
+	opacity: .7;
+	transition: .3s ease;
+	&:hover {
+		opacity: 1;		
+	}
+}

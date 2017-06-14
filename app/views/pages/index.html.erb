@@ -1,0 +1,509 @@
+<header>
+  <div class="header-left img-bg-cover flex-ac-jc-">
+    <div class="header-left-content">
+      <div class="header-logo">
+        <img src="<%= asset_path('common/logo_v_white.svg') %>" alt="">
+      </div>
+      <span>給你滿滿的同婚知識</span>
+      <div class="og-btn">了解修法</div>
+    </div>
+    <a href="" target="_blank">
+      11、12月活動財務報告
+    </a>
+  </div>
+  <div class="header-right">
+    <% @pinned_articles.find_each do |article| %>
+    <div style="background-image: url('<%= article.main_pic.url("regular") %>');" class="post-block img-bg-cover">
+      <div class="mask"></div>
+      <div class="tag">
+        <%= article.category.title %>
+      </div>
+      <div class="block-content">
+        <h2><%= article.title %></h2>
+        <p>
+          <%= article.description %>
+        </p>
+      </div>
+      <div class="g-btn">
+        閱讀文章
+      </div>
+    </div>
+    <% end %>
+  </div>
+</header>
+<nav id="nav">
+  <div class="nav-left flex-jfs-ac-">
+    <div class="logo">
+      <img src="<%= asset_path('common/logo_h.svg') %>" alt="">
+    </div>
+  </div>
+  <div class="nav-right flex-ac-jc-">
+    <a href="" target="_blank">最新消息</a>
+    <a href="" target="_blank">了解婚姻平權</a>
+    <a href="" target="_blank">闢搖專區</a>
+    <a href="" target="_blank">如何支持</a>
+    <a href="" target="_blank">名人支持</a>
+  </div>
+</nav>
+
+<div class="equallove-bar flex-jc-ac-">
+  <h1 class="pc">婚姻平權目前進度</h1>
+  <div class="equallove-bar-main flex-jsb-afs-l6-">
+    <div class="equallove-bar-step equallove-bar-step1 active">
+      <div></div>
+      <h3>提案</h3>
+    </div>
+    <div class="equallove-bar-step equallove-bar-step2 active">
+      <div></div>
+      <h3>一讀</h3>
+    </div>
+    <div class="equallove-bar-step equallove-bar-step3 active">
+      <div></div>
+      <h3 class="pc">司法法制委員會審查</h3>
+    </div>
+    <div class="equallove-bar-step equallove-bar-step4 active">
+      <div></div>
+      <h3>黨團協商</h3>
+    </div>
+    <div class="equallove-bar-step equallove-bar-step4">
+      <div></div>
+      <h3>二讀</h3>
+    </div>
+    <div class="equallove-bar-step equallove-bar-step5">
+      <div></div>
+      <h3>三讀</h3>
+    </div>
+  </div>
+</div>
+
+<section class="sec2-2 flex-jc-ac-">
+  <div class="content">
+    <div class="s2-tabs flex-l4-">
+      <div class="tab active">
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <div class="h3_2">最新消息</div>
+      </div>
+      <div class="tab">
+        <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+        <div class="h3_2">新聞稿</div>
+      </div>
+      <div class="tab">
+        <i class="fa fa-check-square" aria-hidden="true"></i>
+        <div class="h3_2">闢謠專區</div>
+      </div>
+      <div class="tab">
+        <i class="fa fa-video-camera" aria-hidden="true"></i>
+        <div class="h3_2">影音</div>
+      </div>
+    </div>
+    <div class="s2-tabs-show">
+      <div class="tab-show flex-l4-s2-jfs-">
+        <div class="s2-article">
+          <div class="img img-bg-cover" style="background-image: url('/assets/img/main/彩虹點亮台灣.jpg');"></div>
+          <div class="text">
+            <h4>{ 平權之光，全台發亮活動，敬邀每一個期待平權的你~ }</h4>
+            <p>{ 許多朋友都在詢問如何取得點亮台灣的透明彩虹小卡片，因為數量有限 }</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="s2-more">
+      <span>我們還有更多精彩文章</span>
+      <div class="og-btn">閱讀所有文章</div>
+    </div>
+  </div>
+</section>
+<section class="sec2-3 flex-ac-jc-">
+  <div class="content">
+    <h2>臺灣為什麼要修民法</h2>
+    <div class="s2-icons flex-l3-m1-">
+      <div class="icon">
+        <img src="/assets/img/common/icon/why-1.svg" alt="">
+        <h4>專法曠日廢時，人權無法等待</h4>
+        <p>
+          修繕民法三條文（971-1條、972條、1079-1條）便能保障同志伴侶權益。另訂專法不僅曠日廢時，更需耗費龐大司法資源。
+        </p>
+      </div>
+      <div class="icon">
+        <img src="/assets/img/common/icon/why-2.svg" alt="">
+        <h4>民法不修，歧視不休</h4>
+        <p>
+          憲法第七條曰「人生而平等」，這也是制定所有法律的準則，修改民法讓所有人能平等適用，讓台灣的民主社會更多元包容。
+        </p>
+      </div>
+      <div class="icon">
+        <img src="/assets/img/common/icon/why-3.svg" alt="">
+        <h4>專法反而製造更多價值衝突</h4>
+        <p>
+          德國因同志專法而引發超過300件以上官司，至今仍等待審理，浪費更多社會與司法成本。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="sec3">
+  <div class="content">
+    <div class="s3-current flex-jfs- reveal">
+      <div class="s3-block-current">
+        <h3>婚姻平權連署立委</h3>
+        <h5><b class="n1">0</b>% 支持</h5>
+      </div>
+      <div class="s3-block-current">
+        <h3>現存同志家庭</h3>
+        <h5>超過<b class="n2">0</b>組</h5>
+      </div>
+      <div class="s3-block-current">
+        <h3>民調顯示<small>(台灣智庫發布民調)</small></h3>
+        <p>顯示約<b>50%</b>民眾支持婚姻平權修法<br>
+          20 到 29 歲民眾有<b>71.2%</b>支持婚姻平權法案<br>
+          而教育程度越高越支持婚姻平權，大學及以上者有<b>71.8%</b>支持
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="sec7">
+  <div class="content reveal">
+    <h2>台灣婚姻平權，全世界都在關注</h2>
+      <div class="s7-block">
+        <div class="top">
+          <b class="n3">0</b>
+          <p>
+            家國際媒體報導<br>
+            涵蓋五大洲
+          </p>
+        </div>
+        <div class="bottom">
+          <img src="/assets/img/main/media/2.png" alt="">
+          <img src="/assets/img/main/media/1.png" alt="">
+          <img src="/assets/img/main/media/3.png" alt="">
+          <img src="/assets/img/main/media/4.png" alt="">
+          <img src="/assets/img/main/media/5.png" alt="">
+        </div>
+        <a href="http://www.nytimes.com/2014/10/30/world/asia/taiwan-shines-as-beacon-for-gays-in-asia.html" target="_blank">
+          <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+          2014年美國紐約時報：台灣成為亞洲同性戀平權運動的燈塔
+        </a><br>
+        <a href="https://www.theguardian.com/world/2016/oct/29/taiwans-gay-pride-parade-sees-tens-of-thousands-take-to-streets" target="_blank">
+          <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+          2016年英國BBC及衛報：台灣擁有亞洲最先進的社會
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="sec2">
+  <div class="content">
+    <h2>2016 尤版婚姻平權法案四大重點</h2>
+    <p>
+      由尤美女委員所提出的民法修正草案（俗稱婚姻平權），是由委員本人與辦公室，和民間同志與性別團體討論長達半年的版本，和2013年由台灣伴侶權益推動聯盟交由鄭麗君委員所提出的多元成家三法案中的婚姻平權法案有所差異，以下解釋給你聽囉～
+    </p>
+    <div class="s2-icons flex-l4-m2-jsb-">
+      <div data-pop="1" class="reveal s2-icon pop-btn">
+        <img src="/assets/img/common/icon/icon-08.svg" alt="">
+        <h3>只修五條超簡單</h3>
+      </div>
+      <div data-pop="2" class="reveal s2-icon pop-btn">
+        <img src="/assets/img/common/icon/icon-09.svg" alt="">
+        <h3>傳統稱謂全保留</h3>
+      </div>
+      <div data-pop="3" class="reveal s2-icon pop-btn">
+        <img src="/assets/img/common/icon/icon-10.svg" alt="">
+        <h3>婚姻規範都相同</h3>
+      </div>
+      <div data-pop="4" class="reveal s2-icon pop-btn">
+        <img src="/assets/img/common/icon/icon-11.svg" alt="">
+        <h3>兒童權益不退讓</h3>
+      </div>
+    </div>
+    <div class="s2-compare">
+      <div class="s2-compare-card flex-afs-nw-jfs-">
+        <div class="text">
+          <h4>
+            <div class="icon g">
+              <i class="fa fa-plus" aria-hidden="true"></i>
+            </div>
+            新增條文：
+          </h4>
+          <p class="sd">
+            第 971 條之 1 <br>異性或同性之婚姻當事人，平等適用本法及其他法規所定關於夫妻、配偶之規定。<br>
+            異性或同性配偶，平等適用本法及其他法規所定關於父母子女、親屬之規定。<br>
+            但本法第一千零六十三條以異性配偶為限。
+          </p>
+        </div>
+      </div>
+      <div class="s2-compare-card-box flex-l1-m1-">
+        <div class="reveal s2-compare-card flex-afs-nw-jfs-">
+          <div class="text">
+            <h4>
+              <div class="icon">
+                <i class="fa fa-pencil" aria-hidden="true"></i>
+              </div>
+              修正條文
+            </h4>
+            <p>
+              第 972 條<br>
+              婚約應由男女當事人自行訂定。<br>
+              <b style="margin-left: 0;">同性婚約，應由雙方當事人自行訂定。</b><br>
+              <span>原：婚約應由男女當事人自行訂定。</span>
+            </p>
+          </div>
+        </div>
+        <div class="reveal s2-compare-card flex-afs-nw-jfs-">
+          <div class="text">
+            <p>
+              第 973 條<br>
+              未滿<b>十七</b>歲者，不得訂定婚約。
+              <span>原：男未滿十七歲，女未滿十五歲者，不得訂定婚約。</span>
+            </p>
+          </div>
+        </div>
+        <div class="reveal s2-compare-card flex-afs-nw-jfs-">
+          <div class="text">
+            <p>
+              第 980 條<br>
+              未滿<b>十八</b>歲者，不得結婚。<br>
+              <span>原：男未滿十八歲，女未滿十六歲者，不得結婚。</span>
+            </p>
+          </div>
+        </div>
+        <div class="reveal s2-compare-card flex-afs-nw-jfs-">
+          <div class="text">
+            <p>
+              第 1079 條之 1<br>
+              法院為未成年人被收養之認可時，應依養子女最佳利益為之。<br>
+              <b style="margin-left: 0;">
+                法院為前項之認可時，不得以收養者之性別、性傾向、性別認同、性別特質等為理由，而為歧視之對待。
+              </b>
+              <span>原：法院為未成年人被收養之認可時，應依養子女最佳利益為之。</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="sec4 flex-jc-ac-">
+  <div class="content">
+    <h2>了解更多，或許你不會這麼擔心</h2>
+    <!-- 一個 QA -->
+    <h3>
+      { 議題一：為什麼修法爭議這麼大？ }
+      <div>共<span>8</span>篇文章<a href="">閱讀全部</a></div>
+    </h3>
+    <div class="s4-faqs flex-l3-m2-s1-jfs-nw-">
+      <div class="s4-faq reveal">
+        <h4>
+          { Q1：同性婚姻涉及民法的婚姻家庭結構改變，一定要全民公投後才可以修法？ }
+        </h4>
+        <p>
+          { A：不需要。有些團體表示，因為民法中婚姻家庭的制度涉及社會的根本結構，所以修改民法，不能只透過立法院的審議立法就來改變，而必須透過直接民主的全民公投來決定。但是回顧台灣民法修正的歴史，民法中的婚姻家庭制度，正是在大法官憲法解釋與立法院修法的協力下，透過立法院審議、逐次修改，才變成今日這部更平等且保護所有人的法律。<br><br>
+
+          1920年，民法親屬編在中國制定公布；而後為了因應台灣社會的變遷以及遵守憲法裡對於性別平等的保障，從1985年開始，民法親屬編在立法院進行了數次的重大修正：將原先夫優先於妻的法律條款，修改為夫妻在法律上互相平等尊重協商的制度；父優先於母的法律條款，也被尊重「子女最佳利益」的原則所替代。這些攸關台灣婚姻家庭制度的變革，都是透過立法，而非公投。<br><br>
+
+          況且在 2016 年，信心希望聯盟（下稱信望盟）就曾經發起「婚姻家庭制度為社會形成與發展之重要基礎，未經公投通過不得修法」此一主張的公投連署，也已被行政院公投審議委員會以 10:1 的懸殊票數認定不符公投法規定，駁回信望盟的提案。駁回理由中也明確提到，此一主文提案，並非立法原則的創制，也不符合公投法一案一事項的規定。<br> }
+        </p>
+        <div class="s4-faq-more-btn">閱讀更多</div>
+      </div>
+    </div>
+    <!-- </template> -->
+  </div>
+</section>
+<section class="sec5 flex-ac-jc-">
+  <div class="content">
+    <h2>支持婚姻平權，你可以這麼做！</h2>
+    <div class="support-box">
+      <img src="/assets/img/main/s1.png" alt="">
+      <p>打電話或到臉書留言給立委，鼓勵支持委員，遊說未表態委員。</p>
+    </div>
+    <div class="support-box">
+      <img src="/assets/img/main/s2.png" alt="">
+      <p>把此正確資訊的網站分享給你所有朋友</p>
+    </div>
+    <div class="support-box">
+      <img src="/assets/img/main/s3.png" alt="">
+      <p>試著和家中長輩，或是傳遞錯誤訊息給你的朋友耐心解釋</p>
+    </div>
+  </div>
+</section>
+<section class="sec6 flex-ac-jc-">
+  <div class="content">
+    <h2>名人也支持婚姻平權</h2>
+  </div>
+  <div class="content">
+    <div class="celebrities">
+      <div class="celebrity-box">
+        <div class="celebrity">
+          <img src="/assets/img/main/celebrity/1.jpg" alt="">
+          <div class="right">
+            <h4>小S</h4>
+            <p>婚姻並不是一件絕對美滿的事，但只要是人類，都有權力決定自己要不要進入婚姻，這是最基本的人權。</p>
+          </div>
+        </div>
+      </div>
+      <div class="celebrity-box">
+        <div class="celebrity">
+          <img src="/assets/img/main/celebrity/2.jpg" alt="">
+          <div class="right">
+            <h4>田馥甄</h4>
+            <p>希望很快，我們就不用再為本來就理所當然的事情而唱，加油！</p>
+          </div>
+        </div>
+      </div>
+      <div class="celebrity-box">
+        <div class="celebrity">
+          <img src="/assets/img/main/celebrity/3.jpg" alt="">
+          <div class="right">
+            <h4>張惠妹</h4>
+            <p>愛是權利、你們的愛更需要的是勇氣！</p>
+          </div>
+        </div>
+      </div>
+      <div class="celebrity-box">
+        <div class="celebrity">
+          <img src="/assets/img/main/celebrity/4.jpg" alt="">
+          <div class="right">
+            <h4>楊丞琳</h4>
+            <p>我要大聲說你們沒有錯，愛一個人值得被祝福。</p>
+          </div>
+        </div>
+      </div>
+      <div class="celebrity-box">
+        <div class="celebrity">
+          <img src="/assets/img/main/celebrity/5.jpg" alt="">
+          <div class="right">
+            <h4>蔡依林</h4>
+            <p>婚姻是基本人權！</p>
+          </div>
+        </div>
+      </div>
+      <div class="celebrity-box">
+        <div class="celebrity">
+          <img src="/assets/img/main/celebrity/6.jpg" alt="">
+          <div class="right">
+            <h4>蕭亞軒</h4>
+            <p>愛是自由、公平、合諧的。</p>
+          </div>
+        </div>
+      </div>
+      <div class="celebrity-box">
+        <div class="celebrity">
+          <img src="/assets/img/main/celebrity/7.jpg" alt="">
+          <div class="right">
+            <h4>蕭敬騰</h4>
+            <p>愛是一扇敞開的大門，任何人都不該被阻絕在外。</p>
+          </div>
+        </div>
+      </div>
+      <div class="celebrity-box">
+        <div class="celebrity">
+          <img src="/assets/img/main/celebrity/8.jpg" alt="">
+          <div class="right">
+            <h4>羅志祥</h4>
+            <p>譲愛延續下去，愛是不分性別不分彼此，我支持同志婚姻平權。</p>
+          </div>
+        </div>
+      </div>
+      <div class="celebrity-box">
+        <div class="celebrity">
+          <img src="/assets/img/main/celebrity/9.jpg" alt="">
+          <div class="right">
+            <h4>蘇打綠</h4>
+            <p>各種愛，都是愛，基本人權，請還給每個人。</p>
+          </div>
+        </div>
+      </div>
+      <div class="celebrity-box">
+        <div class="celebrity">
+          <img src="/assets/img/main/celebrity/10.jpg" alt="">
+          <div class="right">
+            <h4>A-Lin</h4>
+            <p>在這個世界我們都是獨一無二的，勇敢去愛！</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="pop-up">
+  <div class="pop-up-top">
+    <div class="close-circle">
+      <span class="cross left"></span>
+      <span class="cross right"></span>
+    </div>
+  </div>
+  <div data-show="1" class="pop-up-box flex-jc-">
+    <h3>只修五條超簡單</h3>
+    <p class="pop-up-content">尤美女委員所提出的民法修正案版本，獲得第九屆立法院內48位跨黨派委員連署，總共只有五條法條需要修改，除去第973條規範訂婚年齡、第980條規範結婚年齡之外，與同性婚姻相關之法條只有三條。傳統稱謂全保留</p>
+  </div>
+  <div data-show="2" class="pop-up-box flex-jc-">
+    <h3>傳統稱謂全保留</h3>
+    <p class="pop-up-content">由於尤美女委員的法案版本第971-1條規範同性或異性之婚姻當事人，平等適用夫妻權利義務之規定，此條文如通過，可保留所有稱謂，不需要將「夫妻」改為「配偶」、「父母」改為「雙親」，修改條文數不但大幅降低，節省司法成本，也請擔心以後不能叫爸爸、不能叫媽媽、不能叫祖父母的朋友們可以寬心喔。</p>
+  </div>
+  <div data-show="3" class="pop-up-box flex-jc-">
+    <h3>婚姻規範都相同</h3>
+    <p class="pop-up-content">此次的婚姻平權法案修法，是讓同性夫妻和異性夫妻，能夠平等適用現有的婚姻制度，所以目前婚姻制度中所規範的「單一配偶制」、「彼此互負性忠貞義務」、「近親不得通婚」等規範完全沒有更動，更沒有多P或人獸交合法的修法。目前是在推動婚姻制度的修法，沒有伴侶法或家屬制度。社會中的單一配偶婚姻制度是在民法頒訂的1930年才開始，此後民法中夫妻的財產分配制度也隨著時代陸續變，所以法律必須隨著社會變遷與時俱進，開放同性婚姻，讓想遵守婚姻規範的同志朋友能夠一同守護家庭價值，何樂而不為呢。</p>
+  </div>
+  <div data-show="4" class="pop-up-box flex-jc-">
+    <h3>兒童權益不退讓</h3>
+    <p class="pop-up-content">此次修法為民法，並非兒少相關法律，現有兒少相關保護完全沒變。目前同志家庭生養小孩的方式有四種，分別是：前段婚姻的孩子、國外人工生殖、親戚的孩子、無血緣收養，不管是哪一種方式，只要牽涉到「收養」，不論是同性或異性夫妻，根據《民法》及《兒童及青少年權益保障法》的規定，都需要經過機構或社工的專業評估，加上法院裁定。<br><br>
+
+    目前已有超過百對的同志伴侶，用各種方式生了自己的小孩，這些小孩有兩個爸爸，或兩個媽媽，卻在法律上是單親家庭，只有通過婚姻平權，讓孩子擁有全面性的保障，才是符合兒童的最佳利益。<br><br>
+
+    台灣法律並未規範同志不能收養小孩，現在也已有同志通過長達一年以上的嚴格社福機構評估，成為合格的收養人，以單身身份收養孩子。但如果出養家庭不願意自己的孩子被同志收養，基於「出養家庭最大」的評估原則，同志依舊無法收養該小孩。同時，如果收養孩子的這位同志有伴侶，在目前沒有婚姻關係的狀況之下，孩子在法律上依舊是單親家庭，另一方難以獲得親權。<br><br>
+
+    至於尤美女委員版本中的第1079-1條，是規範收出養機構與法院的評估與裁定過程，不得歧視收養人的性傾向與性別認同，同時需要增加多元性別的相關了解課程，並非反方所說的「霸王收養條款」。再次重申，現有的收出養規範完全沒有改變。</p>
+  </div>
+ <div data-show="5" class="pop-up-box flex-jc-">
+    <h3></h3>
+    <p class="pop-up-content"></p>
+  </div>
+</section>
+<footer class="flex-l3-m1-">
+  <div>
+    <h5>關於我們</h5>
+    <p>
+      婚姻平權大平台於2016年11月正式成軍，<br>
+      為2016主要推動婚姻平權法案修民法的官方平台，<br>
+      由五個同志與性別組織所組成，分別為：<br>
+      <br>
+      台灣同志諮詢熱線協會<br>
+      台灣同志家庭權益促進會<br>
+      婦女新知基金會<br>
+      台灣同志人權法案遊說聯盟<br>
+      酷摩沙獎<br>
+      <br>
+      等共同組成。
+      <!-- <a href="https://hotline.org.tw/" target="_blank">社團法人台灣同志諮詢熱線協會</a><br>
+      <a href="http://www.lgbtfamily.org.tw/" target="_blank">社團法人台灣同志家庭權益促進會</a><br>
+      <a href="http://www.awakening.org.tw/chhtml/index.asp" target="_blank">財團法人婦女新知基金會</a><br>
+      <a href="http://www.pridewatch.tw/beta/" target="_blank">台灣同志人權法案遊說聯盟</a><br> -->
+    </p>
+  </div>
+  <div>
+    <h5>製作團隊</h5>
+    <p>
+      <a href="https://www.facebook.com/lawfirmagainstrumour/" target="_blank">
+        設計：Kelvin
+      </a><br>
+      <a href="https://www.twreporter.org/" target="_blank">前端：Doppler</a><br>
+      <a href="https://www.facebook.com/lawfirmagainstrumour/" target="_blank">
+        後端：Adele
+      </a>
+    </p>
+  </div>
+  <div>
+    <h5>特別感謝｜參考資訊</h5>
+    <p>
+      <a href="https://www.twreporter.org/" target="_blank">報導者</a><br>
+      <a href="https://www.facebook.com/lawfirmagainstrumour/" target="_blank">婚姻平權闢謠事務所</a><br><br>
+    </p>
+    <h5>特別感謝｜贊助夥伴</h5>
+    <p>
+      <a href="">陳澤杉</a><br>
+      <a href="">誠拓設計有限公司</a>
+    </p>
+    <h4>以及 感謝全台同志與性別團體 和 每一個你 為台灣的平等共同努力</h4>
+    <h4>如有任何問題，歡迎和各團體聯繫</h4>
+  </div>
+</footer>

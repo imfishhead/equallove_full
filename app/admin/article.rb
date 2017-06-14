@@ -82,10 +82,10 @@ permit_params :title,
       f.input :category, as: :select2, include_blank: false, collection: Category.is_main, input_html: { style: "width: 180px;" }
       f.input :pinned
       f.input :on
-      # f.input :main_pic, as: :file, hint: f.object.main_pic.present? \
-      #   ? image_tag(f.object.main_pic.url(:regular))
-      #   : content_tag(:span, "no main_pic page yet")
-      # f.input :main_pic_cache, as: :hidden
+      f.input :main_pic, as: :file, hint: f.object.main_pic.present? \
+        ? image_tag(f.object.main_pic.url(:regular))
+        : content_tag(:span, "no main_pic page yet")
+      f.input :main_pic_cache, as: :hidden
       f.input :description, placeholder: "文章簡介，最多 50 字", input_html: { maxlength: 50 }
       f.input :content, as: :ckeditor
     end

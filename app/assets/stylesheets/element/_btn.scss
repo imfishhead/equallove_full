@@ -1,0 +1,56 @@
+[class*='btn'] {
+	cursor: pointer;
+	user-select: none;
+  text-align: center;  
+}
+
+.calltoaction-btn {
+  display: inline-block;
+  width: 120px;
+  visibility: visible;
+	@media screen and (max-width: $breakpoint-nav-transform) {
+		position: fixed;
+		top: 5px;
+		right: 3%;
+	}
+}
+
+.content a.where_money {
+	display: block;
+	width: 150px;
+	margin: 12px auto 0;
+	line-height: 40px;
+	font-size: 13px;
+	background-color: $r3;
+	border-radius: 3px;
+	color: rgba(0,0,0,.8);
+	font-family: $p600;
+	font-weight: 600;
+}
+
+.og-btn {
+	width: 136px;
+  height: 44px;
+  line-height: 44px;
+  font-size: 17px;
+  color: #fff;
+  font-weight: 300;
+  font-family: $p300;
+  border-radius: 22px;
+  margin: 0 auto;
+  background-image: linear-gradient(110deg, #ff5c5c, #ff9d00 51%, #ffd100);
+  box-shadow: 0 8px 32px 0 rgba(255, 214, 34, 0.5);
+}
+
+.g-btn {
+	width: 100px;
+  height: 34px;
+  line-height: 34px;
+  font-size: 14px;
+  color: #fff;
+  font-family: $p300;
+  font-weight: 300;
+  border-radius: 100px;
+  background-image: linear-gradient(114deg, #ffd61e, #8ed443);
+  box-shadow: 0 8px 32px 0 rgba(255, 214, 34, 0.5);
+}

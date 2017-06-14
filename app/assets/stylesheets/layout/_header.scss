@@ -1,0 +1,171 @@
+header {
+	height: calc( 100vh - 200px );
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-height: 500px;
+	@media screen and (max-width: 992px) {
+		display: block;
+		max-height: 200%;
+		height: auto;
+	}
+
+	.header-left, .header-right {
+		width: 50%;
+		flex: 1 1 auto;
+		height: 100%;
+
+		@media screen and (max-width: 992px) {
+			width: 100%;
+		}
+	}
+
+	.header-left {
+		position: relative;
+		margin-right: 2px;
+		background-image: url('../img/main/彩虹點亮台灣.jpg');
+		color: #fff;
+		@media screen and (max-width: 992px) {
+			padding: 25px 0 30px;
+		}
+
+		& > a {
+			position: absolute;
+			bottom: 5px;
+			left: 5px;
+			z-index: 2;
+			font-family: $p200;
+			font-weight: 200;
+			text-decoration: underline;
+			opacity: .7;
+			font-size: 14px;
+			transition: .3s ease;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+
+		span {
+			display: inline-block;
+			font-size: 16px;
+			font-family: $p200;
+			font-weight: 200;
+			margin: 18px auto;
+		}
+	}
+
+	.header-left-content {
+		max-height: 100%;	
+		text-align: center;
+	}
+
+	.header-right {
+		margin-left: 2px;
+		display: flex;
+		flex-direction: column;
+		@media screen and (max-width: 992px) {
+			margin: 0;
+		}
+
+		& > div {
+			flex: 1 1 auto;
+			height: 50%;
+			width: 100%;
+
+			@media screen and (max-width: 992px) {
+				height: auto;
+				padding: 50px 28px;
+			}
+		}
+	}
+
+	.header-logo {
+		text-align: center;
+
+		img {
+			width: auto;
+			height: 210px;
+		}
+	}
+}
+
+.post-block {
+	position: relative;
+	color: #fff;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	padding: 28px;
+
+	.mask {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		background-image: linear-gradient(to right, rgba(255, 68, 68, 0.61), rgba(255, 196, 35, 0.61) 19%, rgba(255, 234, 4, 0.61) 42%, rgba(119, 251, 39, 0.61) 60%, rgba(51, 157, 245, 0.61) 81%, rgba(153, 51, 255, 0.61));
+		background-color: rgba(0,0,0,1);
+		opacity: .4;
+	}
+
+	.tag {
+		z-index: 1;
+		left: 28px;
+		top: 0;
+		position: absolute;
+		width: 68px;
+	  height: 37px;
+	  opacity: 0.9;
+	  border-radius: 0 0 4px 4px;
+	  background-color: #ffffff;
+	  color: #444444;
+	  text-align: center;
+	  line-height: 37px;
+	  font-family: $p400;
+	  font-weight: 400;
+	}
+
+	.block-content {
+		position: relative;
+		z-index: 1;
+
+		h2 {
+			text-align: left;
+		}
+	}
+
+	h2 {
+		font-size: 28px;
+		color: #fff;
+		font-family: $p300;
+		font-weight: 300;
+		margin-bottom: 10px;
+	}
+
+	p {
+		font-family: $p200;
+		font-weight: 200;
+		letter-spacing: .5px;
+		text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+		font-size: 15px;
+	}
+
+	.g-btn {
+		flex: 0 0 auto;
+		z-index: 1;
+	}
+}
+
+.post-block:nth-child(1) {
+	margin-bottom: 2px;
+
+	@media screen and (max-width: 992px) {
+		margin: 4px 0 2px 0;
+	}
+}
+
+.post-block:nth-child(2) {
+	margin-top: 2px;
+}

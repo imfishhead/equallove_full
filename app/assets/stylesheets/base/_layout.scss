@@ -1,0 +1,36 @@
+/// every section & its content
+section {
+	position: relative;
+	width: 100%;
+	height: auto;
+	min-height: calc( 100vh - #{$nav-height} );
+	overflow: hidden;
+	.content {
+		width: 100%;
+		max-width: $content-max-width;
+		padding: $content-padding;
+		margin: 0 auto;
+	}
+}
+
+// bgfull 
+[class*='img-bg'] {
+	background-position: center; 
+	background-repeat: no-repeat;
+}
+.img-bg-cover {
+	background-size: cover;
+}
+.img-bg-contain {
+	background-size: contain;
+}
+
+
+// 圖片切換 mobile & desktop
+.pc { display: block; }
+.m  { display: none;  }
+@media screen and ( max-width: $breakpoint-medium ){
+	.pc { display: none;  }
+	.m  { display: block; }
+}
+

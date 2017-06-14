@@ -1,0 +1,42 @@
+/// color
+$primary-color: #fff;
+$secondary-color: #63ffe2;
+$r0: #f0f0ee;
+$r1: #ff8585;
+$r2: #ffb43a;
+$r3: #ffd621;
+$r4: #97d457;
+$r5: #69aaf5;
+$r6: #c273ff;
+
+/// flex
+$flex-child-spacing: 10px;
+$flex-child-margin: $flex-child-spacing;
+$breakpoint-medium: 992px;
+$breakpoint-small: 768px;
+$breakpoint-xsmall: 320px;
+$breakpoint-nav-transform: $breakpoint-small;
+
+/// section > content
+$content-max-width: 1180px;
+$content-padding: 8% 5%;
+
+/// nav 
+$nav-font-color: rgba(0,0,0,.55);
+$nav-bg-color: $primary-color;
+$mobile-nav-icon-color: #fbfbfb;
+$mobile-nav-list-bg-color: $primary-color;
+$nav-height: 60px;
+$mobile-nav-height: 50px;
+
+/// z-index
+$nav-zindex: 30;
+$popup-zindex: 31;
+
+/// font-family
+$p100: PingFangTC-Ultralight, xingothic-tc, sans-serif, Microsoft JhengHei;
+$p200: PingFangTC-Thin, xingothic-tc, sans-serif, Microsoft JhengHei;
+$p300: PingFangTC-Light, xingothic-tc, sans-serif, Microsoft JhengHei;
+$p400: PingFangTC-Regular, xingothic-tc, sans-serif, Microsoft JhengHei;
+$p500: PingFangTC-Medium, xingothic-tc, sans-serif, Microsoft JhengHei;
+$p600: PingFangTC-Semibold, xingothic-tc, sans-serif, Microsoft JhengHei;

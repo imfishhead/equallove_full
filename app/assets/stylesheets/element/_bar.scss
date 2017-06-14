@@ -1,0 +1,95 @@
+// 婚銀平權法案進度條
+.equallove-bar {
+	position: relative;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	max-width: 1170px;
+	margin: auto;
+	padding: 30px 2%;
+	z-index: 10;
+	background-color: #fff;
+}
+.equallove-bar h1 {
+	display: block;
+	flex: 0 0 100%;
+	padding-left: calc( 8.888%  - 32px );
+	text-align: left;
+	height: 24px;
+	line-height: 24px;
+	font-size: 14px;
+	color: rgba(0,0,0,.4);
+	font-family: $p600;
+	font-weight: 600;
+	margin: 0 0 20px 0;
+}
+.equallove-bar-main {
+	position: relative;
+	flex: 0 0 auto;
+	width: 100%;
+	margin: 0;
+	&:before, &:after {
+		content: '';
+		position: absolute;
+		top: 7px;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		width: calc( 100% - 16.66% - 32.5px );
+		height: 6px;
+		background-color: $r0;
+		//background-image: linear-gradient(to right, $r1 0%, $r2 18%, $r3 38%, $r4 58%, $r5 78%, $r6 98%);
+		background-image: linear-gradient(to right, #ff8585 0%, #ffb43a 18%, #ffd621 45%, #97d457 58%, rgba(255, 255, 255, 0) 40%);
+		z-index: -1;
+	}
+}
+.equallove-bar-main .equallove-bar-step {
+	margin: 0;
+	flex-basis: 16.66%;
+}
+.equallove-bar-step div {
+	width: 100%;
+	max-width: 65px;
+	height: 20px;
+	border-radius: 10px;
+	margin: 0 auto 10px;
+	background-color: $r0;
+}
+.equallove-bar-step1.active div { background-color: $r1; }
+.equallove-bar-step2.active div { background-color: $r2; }
+.equallove-bar-step3.active div { background-color: $r3; }
+.equallove-bar-step4.active div { background-color: $r4; }
+.equallove-bar-step5.active div { background-color: $r5; }
+.equallove-bar-step6.active div { background-color: $r6; }
+
+.equallove-bar-step h3 {
+	font-size: 14px;
+	text-align: center;
+	color: rgba(0,0,0,.65);
+	font-family: $p600;
+	font-weight: 600;
+}
+
+
+// 旁邊的邊
+.ranbow {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 10px;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	div {
+		flex: 1 0 auto;
+		height: 16.66%;
+	}
+	div:nth-child(1) { background-color: $r1; }
+	div:nth-child(2) { background-color: $r2; }
+	div:nth-child(3) { background-color: $r3; }
+	div:nth-child(4) { background-color: $r4; }
+	div:nth-child(5) { background-color: $r5; }
+	div:nth-child(6) { background-color: $r6; }
+}

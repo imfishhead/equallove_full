@@ -1,0 +1,35 @@
+html, body {
+	font-size: 15px;
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font: inherit;
+	vertical-align: baseline;
+	box-sizing: border-box;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; 
+}
+
+ol, ul {
+  list-style: none; 
+}
+
+input, textarea, button, select, option, optgroup, fieldset, label {
+	appearance: none;
+	outline: none;
+	border: 0;
+}
+
+a {
+	display: inline-block;
+	text-decoration: none;
+	color: currentColor;
+}

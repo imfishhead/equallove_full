@@ -1,0 +1,78 @@
+.sec6 {
+	background-color: #f8f8f8;
+	padding: 25px 0;
+	min-height: 0;
+	h2 { margin: 0; }
+	.content {
+		max-width: 100%;
+		padding: 0;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+	.content::-webkit-scrollbar {
+	    height: 2px;
+	    width: 0;
+	}
+	 
+	.content::-webkit-scrollbar-track {
+	    background-color: rgba(0,0,0,.05);
+	}
+	 
+	.content::-webkit-scrollbar-thumb {
+	  background-color: rgba(0,0,0,.05);
+	  border-radius: 5px;
+	}
+}
+
+.celebrities {
+	width: 210%;
+	max-width: 3000px;
+	min-width: 2600px;
+	padding: 0 5%;
+	font-size: 0;
+	margin-top: 30px;
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 5%;
+}
+
+.celebrity-box {
+	box-shadow: 0 3px 2px -1px rgba(0,0,0,.05);
+	margin-right: 20px;
+}
+
+.celebrity {
+	display: flex;
+	font-size: 0;
+
+	.right {
+		padding: 5%;
+		h4 { font-size: 20px; color: rgba(0,0,0,.5); }
+		p {
+			margin-top: 15px;
+			line-height: 1.5;
+			font-size: 14px; 
+			color: #444;
+			opacity: .69;
+			font-family: $p400;
+			font-weight: 400;
+			letter-spacing: 0;
+		}
+	}
+}
+.celebrity>* {
+	display: inline-block;
+	width: 15vw;
+	height: 15vw;
+	max-width: 190px;
+	max-height: 190px;
+	min-width: 165px;
+	min-height: 165px;
+	vertical-align: top;
+	background-color: #fff;
+
+	&.right {
+		max-width: 240px;
+		min-width: 240px;
+	}
+}
