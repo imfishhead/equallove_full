@@ -25,12 +25,12 @@ p .left {
 	color: #FF8585;
 }
 p .right {
-	font-size: 15px;	
+	font-size: 15px;
 	line-height: 20px;
 	margin-left: 10px;
 }
 .sec1 {
-	background-image: url('../img/main/page-1.jpg');
+	background-image: url(asset_path("main/page-1.jpg");
 	background-size: cover;
 	background-attachment: fixed;
 	@media screen and (max-width:$breakpoint-medium) {
@@ -77,9 +77,9 @@ p .right {
 	width: 170px;
 	overflow: hidden;
 	margin: 0 auto;
-	background-image: url('../img/main/Triangle.svg');
-	span { 
-		color: #fff; 
+	background-image: url(asset_path("main/Triangle.svg");
+	span {
+		color: #fff;
 		font-size: 16px;
 		font-family: $p300;
 		font-weight: 300;

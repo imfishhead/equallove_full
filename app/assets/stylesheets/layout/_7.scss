@@ -1,5 +1,5 @@
 .sec7 {
-  background-image: url("../img/main/map.svg");
+  background-image: url(asset_path("main/map.svg"));
   background-size: 60%;
   background-repeat: no-repeat;
   background-position:  100% 0;
@@ -29,7 +29,7 @@
 		width: 300px;
 		margin: 0 auto 0;
 		b, p { display: inline-block; }
-		b { 
+		b {
 			line-height: 63px;
 			font-size: 63px;
 			font-family: $p200;
@@ -42,7 +42,7 @@
 		margin-top: 20px;
 		font-size: 0;
 		margin-bottom: 25px;
-		img { 
+		img {
 			display: inline-block;
 			vertical-align: middle;
 			height: 30px;

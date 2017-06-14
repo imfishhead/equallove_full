@@ -48,27 +48,27 @@
 <div class="equallove-bar flex-jc-ac-">
   <h1 class="pc">婚姻平權目前進度</h1>
   <div class="equallove-bar-main flex-jsb-afs-l6-">
-    <div class="equallove-bar-step equallove-bar-step1 active">
+    <div class="equallove-bar-step equallove-bar-step1 <%= in_progress(1) %>">
       <div></div>
       <h3>提案</h3>
     </div>
-    <div class="equallove-bar-step equallove-bar-step2 active">
+    <div class="equallove-bar-step equallove-bar-step2 <%= in_progress(2) %>">
       <div></div>
       <h3>一讀</h3>
     </div>
-    <div class="equallove-bar-step equallove-bar-step3 active">
+    <div class="equallove-bar-step equallove-bar-step3 <%= in_progress(3) %>">
       <div></div>
       <h3 class="pc">司法法制委員會審查</h3>
     </div>
-    <div class="equallove-bar-step equallove-bar-step4 active">
+    <div class="equallove-bar-step equallove-bar-step4 <%= in_progress(4) %>">
       <div></div>
       <h3>黨團協商</h3>
     </div>
-    <div class="equallove-bar-step equallove-bar-step4">
+    <div class="equallove-bar-step equallove-bar-step5 <%= in_progress(5) %>">
       <div></div>
       <h3>二讀</h3>
     </div>
-    <div class="equallove-bar-step equallove-bar-step5">
+    <div class="equallove-bar-step equallove-bar-step6 <%= in_progress(6) %>">
       <div></div>
       <h3>三讀</h3>
     </div>
@@ -98,7 +98,7 @@
     <div class="s2-tabs-show">
       <div class="tab-show flex-l4-s2-jfs-">
         <div class="s2-article">
-          <div class="img img-bg-cover" style="background-image: url('/assets/img/main/rainbow-light-up-taiwan.jpg');"></div>
+          <div class="img img-bg-cover" style="background-image: url(<%= asset_path("main/rainbow-light-up-taiwan.jpg") %>);"></div>
           <div class="text">
             <h4>{ 平權之光，全台發亮活動，敬邀每一個期待平權的你~ }</h4>
             <p>{ 許多朋友都在詢問如何取得點亮台灣的透明彩虹小卡片，因為數量有限 }</p>
