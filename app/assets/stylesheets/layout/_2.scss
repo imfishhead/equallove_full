@@ -127,14 +127,20 @@
 .sec2-2 {
 	background-color: #f5f5f5;
 	text-align: center;
+
+	.content {
+		padding: 8% 25px;
+	}
 }
 
 .s2-tabs {
 	margin-bottom: 15px;
+	overflow: auto;
 
 	.tab {
+		width: 240px;
 		text-align: center;
-		opacity: .6;
+		opacity: 1;
 		cursor: pointer;
 
 		&.active {
@@ -154,9 +160,7 @@
 .s2-article {
 	border-radius: 3px;
   background-color: #ffffff;
-  margin: 3px;
-  flex: 1 0 auto;
-  max-width: 25%;
+  margin-top: 25px;
 
 	.img {
 		width: 100%;
@@ -200,11 +204,16 @@
 	}
 
 	.og-btn {
+		display: block;
 		width: 190px;
 		line-height: 43px;
 		height: 43px;
 		font-size: 17px;
 		margin-top: 5px;
+	}
+
+	a.og-btn {
+		color: #fff;
 	}
 }
 
