@@ -29,24 +29,13 @@
 	flex: 0 0 auto;
 	width: 100%;
 	margin: 0;
-	&:before, &:after {
-		content: '';
-		position: absolute;
-		top: 7px;
-		left: 0;
-		right: 0;
-		margin: 0 auto;
-		width: calc( 100% - 16.66% - 32.5px );
-		height: 6px;
-		background-color: $r0;
-		//background-image: linear-gradient(to right, $r1 0%, $r2 18%, $r3 38%, $r4 58%, $r5 78%, $r6 98%);
-		background-image: linear-gradient(to right, #ff8585 0%, #ffb43a 18%, #ffd621 45%, #97d457 58%, rgba(255, 255, 255, 0) 40%);
-		z-index: -1;
-	}
 }
 .equallove-bar-main .equallove-bar-step {
 	margin: 0;
 	flex-basis: 16.66%;
+}
+.equallove-bar-step {
+	position: relative;
 }
 .equallove-bar-step div {
 	width: 100%;
@@ -56,12 +45,73 @@
 	margin: 0 auto 10px;
 	background-color: $r0;
 }
-.equallove-bar-step1.active div { background-color: $r1; }
-.equallove-bar-step2.active div { background-color: $r2; }
-.equallove-bar-step3.active div { background-color: $r3; }
-.equallove-bar-step4.active div { background-color: $r4; }
-.equallove-bar-step5.active div { background-color: $r5; }
-.equallove-bar-step6.active div { background-color: $r6; }
+.equallove-bar-step1.active {
+	div {
+		background-color: $r1;
+	}
+}
+.equallove-bar-step2.active {
+	&:before {
+		background-image: linear-gradient(to right, $r1 0%, $r2 100%);
+	}
+	div {
+		background-color: $r2;
+	}
+}
+.equallove-bar-step3.active {
+	&:before {
+		background-image: linear-gradient(to right, $r2 0%, $r3 100%);
+	}
+	div {
+		background-color: $r3;
+	}
+}
+.equallove-bar-step4.active {
+	&:before {
+		background-image: linear-gradient(to right, $r3 0%, $r4 100%);
+	}
+	div {
+		background-color: $r4;
+	}
+}
+.equallove-bar-step5.active {
+	&:before {
+		background-image: linear-gradient(to right, $r4 0%, $r5 100%);
+	}
+	div {
+		background-color: $r5;
+	}
+}
+.equallove-bar-step6.active {
+	&:before {
+		background-image: linear-gradient(to right, $r5 0%, $r6 100%);
+	}
+	div {
+		background-color: $r6;
+	}
+}
+
+
+.equallove-bar-step:not(:first-child) {
+	&:before {
+		content: '';
+    position: absolute;
+    top: 7px;
+    right: 50%;
+    /* right: 0; */
+    margin: 0 auto;
+    width: 100%;
+    height: 6px;
+    background-color: #f0f0ee;
+    z-index: -1;
+	}
+}
+
+
+
+
+
+
 
 .equallove-bar-step h3 {
 	font-size: 14px;
