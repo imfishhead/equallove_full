@@ -153,21 +153,26 @@ footer {
 		  background-color: #ffffff;
 		  border: solid 1px #eeeeee;
 		  width: calc( 100% - 80px );
+		  min-height: 153px;
 		}
 
 		h2 {
-			font-size: 18px;
+			font-size: 17px;
 			text-align: left;
 			font-family: $p400;
 			font-weight: 400;
 			margin-bottom: 5px;
+			max-height: 50px;
+			overflow: hidden;
 		}
 
 		p {
 			margin-top: 0;
 			opacity: .65;
-			font-size: 15px;
+			font-size: 14px;
 			line-height: 1.5;
+			max-height: 66px;
+			overflow: hidden;
 		}
 	}
 }
