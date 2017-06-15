@@ -69,7 +69,7 @@ permit_params :title,
                   include_blank: false,
                   default: current_admin_user.id
       f.input :title
-      f.input :category, as: :select2, include_blank: false, collection: Category.is_main, input_html: { style: "width: 200px;" }
+      f.input :category, as: :select2, include_blank: false, collection: Category.where("title LIKE ?", "%影音%"), input_html: { style: "width: 200px;" }
       f.input :on
       f.input :video, placeholder: "請輸入影片 youtube 網址"
       f.input :main_pic, as: :file, hint: f.object.main_pic.present? \

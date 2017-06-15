@@ -82,7 +82,7 @@ permit_params :title,
                   include_blank: false,
                   default: current_admin_user.id
       f.input :title
-      f.input :category, as: :select2, include_blank: false, collection: Category.is_main, input_html: { style: "width: 180px;" }
+      f.input :category, as: :select2, include_blank: false, collection: Category.without_sub, input_html: { style: "width: 180px;" }
       f.input :pinned
       f.input :front_page_pinned
       f.input :on

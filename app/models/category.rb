@@ -20,4 +20,8 @@ class Category < ActiveRecord::Base
 	def is_subject?
 		!parent_id.nil?
 	end
+
+	def self.without_sub
+		Category.where(parent_id: nil).where.not(id: Category.pluck(:parent_id))
+	end
 end
