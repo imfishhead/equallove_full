@@ -78,50 +78,58 @@
 <section class="sec2-2 flex-jc-ac-">
   <div class="content">
     <div class="s2-tabs flex-l4-m2-s1-">
+      <% if @front_page_pinned[0].on? %>
       <div class="tab">
         <i class="fa fa-star" aria-hidden="true"></i>
-        <div class="h3_2">最新消息</div>
+        <div class="h3_2"><%= @front_page_pinned[0].title %></div>
         <div class="s2-article">
-          <div class="img img-bg-cover" style="background-image: url(<%= asset_path("main/rainbow-light-up-taiwan.jpg") %>);"></div>
+          <div class="img img-bg-cover" style="background-image: url(<%= @front_page_pinned[0].articles.on.first.main_pic.url("regular") %>);"></div>
           <div class="text">
-            <h4>{ 平權之光，全台發亮活動，敬邀每一個期待平權的你~ }</h4>
-            <p>{ 許多朋友都在詢問如何取得點亮台灣的透明彩虹小卡片，因為數量有限 }</p>
+            <h4><%= @front_page_pinned[0].articles.on.first.title %></h4>
+            <p><%= @front_page_pinned[0].articles.on.first.description %></p>
           </div>
         </div>
       </div>
+      <% end %>
+      <% if @front_page_pinned[1].on? %>
       <div class="tab">
         <i class="fa fa-newspaper-o" aria-hidden="true"></i>
-        <div class="h3_2">新聞稿</div>
+        <div class="h3_2"><%= @front_page_pinned[1].title %></div>
         <div class="s2-article">
-          <div class="img img-bg-cover" style="background-image: url(<%= asset_path("main/rainbow-light-up-taiwan.jpg") %>);"></div>
+          <div class="img img-bg-cover" style="background-image: url(<%= @front_page_pinned[1].articles.on.first.main_pic.url("regular") %>);"></div>
           <div class="text">
-            <h4>{ 平權之光，全台發亮活動，敬邀每一個期待平權的你~ }</h4>
-            <p>{ 許多朋友都在詢問如何取得點亮台灣的透明彩虹小卡片，因為數量有限 }</p>
+            <h4><%= @front_page_pinned[1].articles.on.first.title %></h4>
+            <p><%= @front_page_pinned[1].articles.on.first.description %></p>
           </div>
         </div>
       </div>
+      <% end %>
+      <% if @front_page_pinned[2].on? %>
       <div class="tab">
         <i class="fa fa-check-square" aria-hidden="true"></i>
-        <div class="h3_2">闢謠專區</div>
+        <div class="h3_2"><%= @front_page_pinned[2].title %></div>
         <div class="s2-article">
-          <div class="img img-bg-cover" style="background-image: url(<%= asset_path("main/rainbow-light-up-taiwan.jpg") %>);"></div>
+          <div class="img img-bg-cover" style="background-image: url(<%= @front_page_pinned[2].articles.on.first.main_pic.url("regular") %>);"></div>
           <div class="text">
-            <h4>{ 平權之光，全台發亮活動，敬邀每一個期待平權的你~ }</h4>
-            <p>{ 許多朋友都在詢問如何取得點亮台灣的透明彩虹小卡片，因為數量有限 }</p>
+            <h4><%= @front_page_pinned[2].articles.on.first.title %></h4>
+            <p><%= @front_page_pinned[2].articles.on.first.description %></p>
           </div>
         </div>
       </div>
+      <% end %>
+      <% if @front_page_pinned[3].on? %>
       <div class="tab">
         <i class="fa fa-video-camera" aria-hidden="true"></i>
-        <div class="h3_2">影音</div>
+        <div class="h3_2"><%= @front_page_pinned[3].title %></div>
         <div class="s2-article">
-          <div class="img img-bg-cover" style="background-image: url(<%= asset_path("main/rainbow-light-up-taiwan.jpg") %>);"></div>
+          <div class="img img-bg-cover" style="background-image: url(<%= @front_page_pinned[3].videos.on.first.main_pic.url("regular") %>);"></div>
           <div class="text">
-            <h4>{ 平權之光，全台發亮活動，敬邀每一個期待平權的你~ }</h4>
-            <p>{ 許多朋友都在詢問如何取得點亮台灣的透明彩虹小卡片，因為數量有限 }</p>
+            <h4><%= @front_page_pinned[3].videos.on.first.title %></h4>
+            <p><%= @front_page_pinned[3].videos.on.first.description %></p>
           </div>
         </div>
       </div>
+      <% end %>
     </div>
     <div class="s2-more">
       <span>我們還有更多精彩文章</span>
