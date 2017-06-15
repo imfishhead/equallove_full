@@ -5,7 +5,7 @@ $(function(){
 	}).resize();
 
 	$(window).bind('scroll resize', function() {
-		let $this_Top = $(this).scrollTop();
+		$this_Top = $(this).scrollTop();
 		if ( $this_Top > $nav ) {
 			$('body').addClass('nav-fixed')
 		} else {
