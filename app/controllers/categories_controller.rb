@@ -13,6 +13,11 @@ class CategoriesController < ApplicationController
     redirect_to root_path unless @category.on?
     @categories = Category.on.is_main
     @has_subjects = @category.sub_categories.present?
+    if @category.title.include? "影音"
+      render "video"
+    elsif @category.title.include? "了解"
+      render "understand"
+    end
   end
 
   # GET /categories/new
