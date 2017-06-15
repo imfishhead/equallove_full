@@ -80,6 +80,7 @@
       <div class="tab">
         <i class="fa fa-star" aria-hidden="true"></i>
         <div class="h3_2"><%= @front_page_pinned[0].title %></div>
+        <%= link_to article_path(@front_page_pinned[0].articles.on.first), target: "_blank" do %>
         <div class="s2-article">
           <div class="img img-bg-cover" style="background-image: url(<%= @front_page_pinned[0].articles.on.first.main_pic.url("regular") %>);"></div>
           <div class="text">
@@ -87,12 +88,14 @@
             <p><%= @front_page_pinned[0].articles.on.first.description %></p>
           </div>
         </div>
+        <% end %>
       </div>
       <% end %>
       <% if @front_page_pinned[1].on? %>
       <div class="tab">
         <i class="fa fa-newspaper-o" aria-hidden="true"></i>
         <div class="h3_2"><%= @front_page_pinned[1].title %></div>
+        <%= link_to article_path(@front_page_pinned[1].articles.on.first), target: "_blank" do %>
         <div class="s2-article">
           <div class="img img-bg-cover" style="background-image: url(<%= @front_page_pinned[1].articles.on.first.main_pic.url("regular") %>);"></div>
           <div class="text">
@@ -100,12 +103,14 @@
             <p><%= @front_page_pinned[1].articles.on.first.description %></p>
           </div>
         </div>
+        <% end %>
       </div>
       <% end %>
       <% if @front_page_pinned[2].on? %>
       <div class="tab">
         <i class="fa fa-check-square" aria-hidden="true"></i>
         <div class="h3_2"><%= @front_page_pinned[2].title %></div>
+        <%= link_to article_path(@front_page_pinned[2].articles.on.first), target: "_blank" do %>
         <div class="s2-article">
           <div class="img img-bg-cover" style="background-image: url(<%= @front_page_pinned[2].articles.on.first.main_pic.url("regular") %>);"></div>
           <div class="text">
@@ -113,12 +118,14 @@
             <p><%= @front_page_pinned[2].articles.on.first.description %></p>
           </div>
         </div>
+        <% end %>
       </div>
       <% end %>
       <% if @front_page_pinned[3].on? %>
       <div class="tab">
         <i class="fa fa-video-camera" aria-hidden="true"></i>
         <div class="h3_2"><%= @front_page_pinned[3].title %></div>
+        <%= link_to video_path(@front_page_pinned[3].videos.on.first), target: "_blank" do %>
         <div class="s2-article">
           <div class="img img-bg-cover" style="background-image: url(<%= @front_page_pinned[3].videos.on.first.main_pic.url("regular") %>);"></div>
           <div class="text">
@@ -126,6 +133,7 @@
             <p><%= @front_page_pinned[3].videos.on.first.description %></p>
           </div>
         </div>
+        <% end %>
       </div>
       <% end %>
     </div>
@@ -326,7 +334,7 @@
         <p>
           <%= question.content %>
         </p>
-        <div class="s4-faq-more-btn">閱讀更多</div>
+        <%= link_to "閱讀更多", question_path(question), class: "s4-faq-more-btn", target: "_blank" %>
       </div>
       <% end %>
     </div>
