@@ -75,7 +75,7 @@ permit_params :title,
   form do |f|
   	f.semantic_errors *f.object.errors.keys
     f.inputs "圖文文章" do
-      f.input :admin_user_id,
+      f.input :admin_user,
                   as: :select2,
                   collection: AdminUser.all,
                   member_label: Proc.new { |x| "#{x.name}(#{x.email})" },
