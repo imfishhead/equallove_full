@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :users
   resources :posts
+  resources :articles
+  resources :videos
+  resources :questions
   resources :categories
 
   # The priority is based upon order of creation: first created -> highest priority.

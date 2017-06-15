@@ -25,9 +25,7 @@
           <%= article.description %>
         </p>
       </div>
-      <div class="g-btn">
-        閱讀文章
-      </div>
+      <%= link_to "閱讀文章", article_path(article), class: "g-btn", target: "_blank" %>
     </div>
     <% end %>
   </div>

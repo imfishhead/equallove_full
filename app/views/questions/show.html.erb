@@ -1,0 +1,11 @@
+<%= render partial: "categories/partials/nav", locals: { id: @category.id, category: @category } %>
+<section>
+  <div class="pop-up-box flex-jc-">
+    <h3><%= @question.title %></h3>
+  </div>
+  <div class="pop-up-box flex-jc-">
+    <p class="pop-up-content"><%= raw @question.content %></p>
+  </div>
+</section>
+
+

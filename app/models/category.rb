@@ -10,4 +10,14 @@ class Category < ActiveRecord::Base
   scope :is_subject, -> { where.not(parent_id: nil) }
   scope :is_main, -> { where(parent_id: nil) }
 	scope :on, -> { where(on: true) }
+	scope :without_posts, -> { includes(:posts).where(posts: { id: nil }) }
+	scope :with_posts, -> { joins(:posts) }
+
+	def is_main?
+		parent_id.nil?
+	end
+
+	def is_subject?
+		!parent_id.nil?
+	end
 end

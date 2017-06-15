@@ -7,9 +7,9 @@
     </div>
   </div>
   <div class="nav-right flex-ac-jc-">
-    <% @categories.find_each do |category| %>
+    <% Category.on.is_main.find_each do |category| %>
     <!-- 輪每一個分類，如果是現在這個頁面的就打 active  -->
-      <%= link_to category.title, category_path(category), class: is_active(category) %>
+      <%= link_to category.title, category_path(category), class: is_active(id, category) %>
     <% end %>
   </div>
 </nav>

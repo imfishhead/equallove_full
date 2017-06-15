@@ -1,22 +1,25 @@
 <div id="blog" class="blog-understand">
-  <%= render partial: "categories/partials/nav", locals: { category: @category } %>
+  <%= render partial: "categories/partials/nav", locals: { id: params[:id], category: @category } %>
   <section class="main-blog" data-category="<%= @category.title %>">
     <div class="content">
       <h1><%= @category.title %></h1>
       <!-- sub_categories 是次分類  -->
-      <% @category.sub_categories.on.find_each do |sub_c| %>
+      <% @category.sub_categories.with_posts.on.find_each do |sub_c| %>
       <h5><%= sub_c.title %></h5>
         <div class="articles flex-l3-m2-s1-jfs-afs-">
           <!-- 這裡 for each 次分類底下的文章 -->
-          <% sub_c.posts.on.find_each do |post| %>
+          <% sub_c.questions.on.find_each do |question| %>
           <div class="s4-faq reveal">
             <h4>
-              <%= post.title.truncate(20) %>
+              <%= question.title.truncate(20) %>
             </h4>
             <p>
-              <%= post.content.try(:truncate, 30) %>
+              <%= question.content.try(:truncate, 30) %>
             </p>
+            <%= link_to question_path(question) do %>
             <div class="s4-faq-more-btn">閱讀更多</div>
+            <% end %>
+            <!-- 這裡應該要是 question_path(question) -->
           </div>
           <% end %>
         </div>
