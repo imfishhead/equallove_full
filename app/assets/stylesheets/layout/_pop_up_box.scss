@@ -54,6 +54,7 @@
   overflow: scroll;
   padding-bottom: 60px;
   &>* {
+    white-space: pre-line;
   	min-width: 400px;
   	width: 80%;
   	text-align: justify;

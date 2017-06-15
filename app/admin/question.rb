@@ -4,7 +4,6 @@ ActiveAdmin.register Question do
 #
 permit_params :title,
               :admin_user_id,
-							:description,
               :content,
 							:on,
 							:main_pic,
@@ -31,7 +30,6 @@ permit_params :title,
     column :main_pic do |question|
       image_tag question.main_pic.url('regular')
     end
-    column :description
     column :content do |question|
       question.content.truncate(50)
     end
@@ -54,7 +52,6 @@ permit_params :title,
           end
           row :title
           row :on
-          row :description
           row :content do |question|
             question.content
           end
@@ -79,7 +76,6 @@ permit_params :title,
         ? image_tag(f.object.main_pic.url(:regular))
         : content_tag(:span, "no main_pic page yet")
       f.input :main_pic_cache, as: :hidden
-      f.input :description
       f.input :content
     end
     f.actions
