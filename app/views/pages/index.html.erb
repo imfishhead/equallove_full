@@ -76,61 +76,61 @@
 <section class="sec2-2 flex-jc-ac-">
   <div class="content">
     <div class="s2-tabs flex-l4-m2-s1-">
-      <% if @front_page_pinned[0].on? %>
+      <% if @front_page_pinned_newest.on? %>
       <div class="tab">
         <i class="fa fa-star" aria-hidden="true"></i>
-        <div class="h3_2"><%= @front_page_pinned[0].title %></div>
-        <%= link_to article_path(@front_page_pinned[0].articles.on.first), target: "_blank" do %>
+        <div class="h3_2"><%= @front_page_pinned_newest.title %></div>
+        <%= link_to article_path(@front_page_pinned_newest.articles.on.first), target: "_blank" do %>
         <div class="s2-article">
-          <div class="img img-bg-cover" style="background-image: url(<%= @front_page_pinned[0].articles.on.first.main_pic.url("regular") %>);"></div>
+          <div class="img img-bg-cover" style="background-image: url(<%= @front_page_pinned_newest.articles.on.first.main_pic.url("regular") %>);"></div>
           <div class="text">
-            <h4><%= @front_page_pinned[0].articles.on.first.title %></h4>
-            <p><%= @front_page_pinned[0].articles.on.first.description %></p>
+            <h4><%= @front_page_pinned_newest.articles.on.first.title %></h4>
+            <p><%= @front_page_pinned_newest.articles.on.first.description %></p>
           </div>
         </div>
         <% end %>
       </div>
       <% end %>
-      <% if @front_page_pinned[1].on? %>
+      <% if @front_page_pinned_news.on? %>
       <div class="tab">
         <i class="fa fa-newspaper-o" aria-hidden="true"></i>
-        <div class="h3_2"><%= @front_page_pinned[1].title %></div>
-        <%= link_to article_path(@front_page_pinned[1].articles.on.first), target: "_blank" do %>
+        <div class="h3_2"><%= @front_page_pinned_news.title %></div>
+        <%= link_to article_path(@front_page_pinned_news.articles.on.first), target: "_blank" do %>
         <div class="s2-article">
-          <div class="img img-bg-cover" style="background-image: url(<%= @front_page_pinned[1].articles.on.first.main_pic.url("regular") %>);"></div>
+          <div class="img img-bg-cover" style="background-image: url(<%= @front_page_pinned_news.articles.on.first.main_pic.url("regular") %>);"></div>
           <div class="text">
-            <h4><%= @front_page_pinned[1].articles.on.first.title %></h4>
-            <p><%= @front_page_pinned[1].articles.on.first.description %></p>
+            <h4><%= @front_page_pinned_news.articles.on.first.title %></h4>
+            <p><%= @front_page_pinned_news.articles.on.first.description %></p>
           </div>
         </div>
         <% end %>
       </div>
       <% end %>
-      <% if @front_page_pinned[2].on? %>
+      <% if @front_page_pinned_rumors.on? %>
       <div class="tab">
         <i class="fa fa-check-square" aria-hidden="true"></i>
-        <div class="h3_2"><%= @front_page_pinned[2].title %></div>
-        <%= link_to article_path(@front_page_pinned[2].articles.on.first), target: "_blank" do %>
+        <div class="h3_2"><%= @front_page_pinned_rumors.title %></div>
+        <%= link_to article_path(@front_page_pinned_rumors.articles.on.first), target: "_blank" do %>
         <div class="s2-article">
-          <div class="img img-bg-cover" style="background-image: url(<%= @front_page_pinned[2].articles.on.first.main_pic.url("regular") %>);"></div>
+          <div class="img img-bg-cover" style="background-image: url(<%= @front_page_pinned_rumors.articles.on.first.main_pic.url("regular") %>);"></div>
           <div class="text">
-            <h4><%= @front_page_pinned[2].articles.on.first.title %></h4>
-            <p><%= @front_page_pinned[2].articles.on.first.description %></p>
+            <h4><%= @front_page_pinned_rumors.articles.on.first.title %></h4>
+            <p><%= @front_page_pinned_rumors.articles.on.first.description %></p>
           </div>
         </div>
         <% end %>
       </div>
       <% end %>
-      <% if @front_page_pinned[3].on? %>
+      <% if @front_page_pinned_videos.on? %>
       <div class="tab">
         <i class="fa fa-video-camera" aria-hidden="true"></i>
-        <div class="h3_2"><%= @front_page_pinned[3].title %></div>
-        <%= link_to video_path(@front_page_pinned[3].videos.on.first), target: "_blank" do %>
+        <div class="h3_2"><%= @front_page_pinned_videos.title %></div>
+        <%= link_to video_path(@front_page_pinned_videos.videos.on.first), target: "_blank" do %>
         <div class="s2-article">
-          <div class="img img-bg-cover" style="background-image: url(<%= @front_page_pinned[3].videos.on.first.main_pic.url("regular") %>);"></div>
+          <div class="img img-bg-cover" style="background-image: url(<%= @front_page_pinned_videos.videos.on.first.main_pic.url("regular") %>);"></div>
           <div class="text">
-            <h4><%= @front_page_pinned[3].videos.on.first.title %></h4>
-            <p><%= @front_page_pinned[3].videos.on.first.description %></p>
+            <h4><%= @front_page_pinned_videos.videos.on.first.title %></h4>
+            <p><%= @front_page_pinned_videos.videos.on.first.description %></p>
           </div>
         </div>
         <% end %>
