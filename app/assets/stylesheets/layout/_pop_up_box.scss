@@ -53,12 +53,6 @@
   padding-top: 60px;
   overflow: scroll;
   padding-bottom: 60px;
-  &>* {
-    white-space: pre-line;
-  	min-width: 400px;
-  	width: 80%;
-  	text-align: justify;
-  }
 }
 
 @media screen and (max-width:$breakpoint-small) {
@@ -70,9 +64,5 @@
 	.pop-up-box {
 	  padding-top: 40px;
 	  padding-bottom: 40px;
-		&>* {
-			min-width: 338px;
-			text-align: justify;
-		}
 	}
 }
