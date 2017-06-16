@@ -17,7 +17,6 @@ permit_params :id, :title, :parent_id, :on, sub_categories_attributes: [:id, :ti
 	  attributes_table do
 	    row :title
 	    row :on
-    	h4 "次分類"
 	    category.sub_categories.each do |c|
 		    attributes_table do
   		   	row :title do
