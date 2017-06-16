@@ -22,7 +22,7 @@
 
 body.nav-fixed {
 	#nav { position: fixed; }
-	padding-top: 40px
+	padding-top: 50px
 }
 
 * {
@@ -237,6 +237,14 @@ footer {
 				margin-right: 10px;
 			}
 		}
+	}
+
+	h2 {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 20px auto;
+    padding: 0 20px;
 	}
 
 	.pop-up-content {
