@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170614200544) do
+ActiveRecord::Schema.define(version: 20170616105727) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -98,7 +98,7 @@ ActiveRecord::Schema.define(version: 20170614200544) do
     t.text     "content"
     t.boolean  "on",                default: true
     t.string   "main_pic"
-    t.string   "video"
+    t.text     "video"
     t.integer  "category_id"
     t.string   "type"
     t.datetime "created_at",                        null: false
