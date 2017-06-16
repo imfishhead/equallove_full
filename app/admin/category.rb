@@ -42,7 +42,7 @@ permit_params :id, :title, :parent_id, :on, sub_categories_attributes: [:id, :ti
         a.input :title
         a.input :on
       end
-    end
+    end unless f.object.is_subject? || !f.object.persisted?
     f.actions
   end
 end

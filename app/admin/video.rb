@@ -71,12 +71,12 @@ permit_params :title,
       f.input :title
       f.input :category, as: :select2, include_blank: false, collection: Category.where("title LIKE ?", "%影音%"), input_html: { style: "width: 200px;" }
       f.input :on
-      f.input :video, placeholder: "請輸入影片 youtube 網址"
+      f.input :video, placeholder: '請輸入影片 youtube 嵌入的 iframe 語法，如：<iframe width=\'1280\' height=\'720\' src=\'https://www.youtube.com/embed......</iframe>\''.html_safe
       f.input :main_pic, as: :file, hint: f.object.main_pic.present? \
         ? image_tag(f.object.main_pic.url(:regular))
         : content_tag(:span, "no main_pic page yet")
       f.input :main_pic_cache, as: :hidden
-      f.input :description
+      f.input :description, placeholder: "文章簡介，最多 30 字", input_html: { maxlength: 30 }
     end
     f.actions
   end

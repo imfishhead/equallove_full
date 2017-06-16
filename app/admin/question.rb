@@ -72,9 +72,6 @@ permit_params :title,
       f.input :title
       f.input :category, as: :select2, include_blank: false, collection: Category.is_subject, input_html: { style: "width: 200px;" }
       f.input :on
-      f.input :main_pic, as: :file, hint: f.object.main_pic.present? \
-        ? image_tag(f.object.main_pic.url(:regular))
-        : content_tag(:span, "no main_pic page yet")
       f.input :main_pic_cache, as: :hidden
       f.input :content
     end

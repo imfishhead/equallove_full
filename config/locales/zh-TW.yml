@@ -30,6 +30,7 @@ zh-TW:
       question: 問與答
       category: 分類
       admin_user: 管理者
+      setting: 設定
     attributes:
       category:
         title: 名稱
@@ -47,12 +48,25 @@ zh-TW:
         content: 內容
         'on': 開啟
         main_pic: 主要圖片
-        video: 影片連結
+        video: 影片程式碼
         category_id: 分類 id
         created_at: 建立時間
         updated_at: 更新時間
         pinned: 置頂（首頁最上面）
         front_page_pinned: 每個分類置頂
+      question:
+        title: 問題
+        content: 答案
+      setting:
+        var: 設定
+        value: 進度
+  progress:
+    '1': 提案
+    '2': 一讀
+    '3': 委員會審查
+    '4': 黨團協商
+    '5': 二讀
+    '6': 三讀
   active_admin:
     dashboard: 儀表板
     dashboard_welcome:
