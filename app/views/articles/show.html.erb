@@ -1,11 +1,26 @@
 <%= render partial: "categories/partials/nav", locals: { id: @category.id, category: @category } %>
-<section>
-  <div class="pop-up-box flex-jc-">
-    <%= image_tag @article.main_pic.url("regular") %>
-  </div>
-  <div class="pop-up-box flex-jc-">
-    <h3><%= @article.title %></h3>
-    <p class="pop-up-content"><%= raw @article.content %></p>
+<section class="article-show">
+  <div class="pop-up-box">
+  	<div class="header">
+  		<div class="img-bg-cover" style="background-image: url('<%= @article.main_pic.url("regular")%>') "></div>
+  		<%= image_tag @article.main_pic.url("regular") %>
+  	</div>
+    <nav>
+    	<div class="goback-btn">
+    		<i class="fa fa-angle-left" aria-hidden="true"></i>回上一頁
+    	</div>
+    	<div class="category">
+    		<%= @article.category.title %>
+    	</div>
+    	<div class="copy-btn" data-copy-link="">
+    		複製連結
+    	</div>
+    </nav>
+    <div class="pop-up-content">
+	    <p>
+	    	<%= raw @article.content %>
+			</p>
+		</div>
   </div>
 </section>
 
