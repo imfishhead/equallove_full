@@ -13,5 +13,11 @@ $(function(){
 		}
 　}).scroll();
 	
+
+	$("#introduce-laws").click(function() {
+		$('html,body').animate({
+      scrollTop: $(".sec2-3").offset().top
+	    }, 'slow');
+	})
 })
 
