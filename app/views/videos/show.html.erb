@@ -2,28 +2,19 @@
 <section class="article-show">
   <div class="pop-up-box">
   	<h2><%= @video.title %></h2>
-    <nav>
-    	<div class="goback-btn">
-    		<i class="fa fa-angle-left" aria-hidden="true"></i>回上一頁
-    	</div>
-    	<div class="category">
-    		<%= @video.category.title %>
-    	</div>
-    	<div class="copy-btn" data-copy-link="">
-    		複製連結
-    	</div>
-    </nav>
+    <%= render partial: "layouts/sub_nav", locals: { title: @video.category.title } %>
     <div class="pop-up-content">
 	    <!--  yotuber box -->
 	    <div class="youtube-box-main" style="margin-top: 30px;">
 	      <div class="youtube-box-main-169">
-	        <iframe src="https://www.youtube.com/embed/FUXMqninXK0" frameborder="0" allowfullscreen></iframe>
+          <%= raw @video.video %>
+	        <!-- <iframe src="https://www.youtube.com/embed/FUXMqninXK0" frameborder="0" allowfullscreen></iframe> -->
 	      </div>
 	    </div> 
 			<!--  yotuber box END -->
-			<p>
-				<%= raw @video.content %>
-			</p>
+      <p>
+        <%= raw @video.description %>
+      </p>
 		</div>
   </div>
 </section>
@@ -41,8 +32,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100% !important;
+  height: 100% !important;
   pointer-events: visible;
 }
 /* ----- youtuber-box END ----- */

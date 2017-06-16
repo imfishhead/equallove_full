@@ -4,6 +4,9 @@ $(window).load(function() {
 		$('.nav-list').toggleClass('active');
 	});
 
+	$(".goback-btn").click(function() {
+		window.history.back();
+	})
 
 
 	/// 婚姻平權進度條
@@ -58,5 +61,8 @@ $(window).load(function() {
   sr.reveal('.s4-faq.reveal', { duration: 800 }, 100);
 });
 
+function copyToClipboard() {
+	prompt('請按複製鍵複製網址：', window.location);
+}
 
 

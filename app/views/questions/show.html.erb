@@ -2,17 +2,7 @@
 <section class="article-show">
   <div class="pop-up-box">
   	<h2><%= @question.title %></h2>
-    <nav>
-    	<div class="goback-btn">
-    		<i class="fa fa-angle-left" aria-hidden="true"></i>回上一頁
-    	</div>
-    	<div class="category">
-    		<%= @question.category.title %>
-    	</div>
-    	<div class="copy-btn" data-copy-link="">
-    		複製連結
-    	</div>
-    </nav>
+    <%= render partial: "layouts/sub_nav", locals: { title: @question.category.title } %>
     <div class="pop-up-content">
 	    <p>
 	    	<%= raw @question.content %>

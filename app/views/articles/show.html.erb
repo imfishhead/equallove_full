@@ -6,17 +6,7 @@
   		<%= image_tag @article.main_pic.url("regular") %>
   	</div>
   	<h2><%= @article.title %></h2>
-    <nav>
-    	<div class="goback-btn">
-    		<i class="fa fa-angle-left" aria-hidden="true"></i>回上一頁
-    	</div>
-    	<div class="category">
-    		<%= @article.category.title %>
-    	</div>
-    	<div class="copy-btn" data-copy-link="">
-    		複製連結
-    	</div>
-    </nav>
+    <%= render partial: "layouts/sub_nav", locals: { title: @article.category.title } %>
     <div class="pop-up-content">
 	    <p>
 	    	<%= raw @article.content %>
