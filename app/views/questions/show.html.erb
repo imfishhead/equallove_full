@@ -4,7 +4,7 @@
   	<h2><%= @question.title %></h2>
     <%= render partial: "layouts/sub_nav", locals: { title: @question.category.title } %>
     <div class="pop-up-content">
-	    <p>
+	    <p class="question-content">
 	    	<%= raw @question.content %>
 			</p>
 		</div>
