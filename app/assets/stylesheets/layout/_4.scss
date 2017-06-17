@@ -126,6 +126,8 @@
 	border-radius: 30px;
 	margin: 10px auto 0;
 	opacity: .7;
+	font-family: $p400;
+	font-weight: 400;
 	transition: .3s ease;
 	&:hover {
 		opacity: 1;		
