@@ -5,7 +5,25 @@
 	<div class="category">
 		<%= title %>
 	</div>
-  <div class="copy-btn" onclick="copyToClipboard();">
+  <div class="copy-btn" id="copy-link">
 		複製連結
 	</div>
 </nav>
+
+<!-- /// 複製網址先掛 cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
+<script>
+	// 暫時先放這
+	var clipboard = new Clipboard('#copy-link', {
+    text: function() {
+        return window.location.href
+    }
+	});
+	clipboard.on('success', function(e) {
+    alert('複製成功，跟您人生一樣成功。')
+	});
+
+	clipboard.on('error', function(e) {
+    alert('複製失敗，但我們不怕失敗。')
+	});
+</script>
