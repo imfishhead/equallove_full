@@ -11,10 +11,10 @@
           <% sub_c.questions.on.find_each do |question| %>
           <div class="s4-faq reveal">
             <h4>
-              <%= question.title.truncate(20) %>
+              <%= question.title %>
             </h4>
             <p>
-              <%= question.content.try(:truncate, 30) %>
+              <%= question.content %>
             </p>
             <%= link_to question_path(question) do %>
             <div class="s4-faq-more-btn">閱讀更多</div>
