@@ -2,7 +2,7 @@ $(window).on('load', function() {
 	
 	$(window).bind('resize', function() {
 		$nav = $('#nav').offset().top
-		$sub_nav = $('#sub_nav').offset().top ? $('#sub_nav').offset().top - 50 : 0
+		$sub_nav = $('#sub_nav').offset() ? $('#sub_nav').offset().top - 50 : 0
 	}).resize();
 
 	$(window).bind('scroll', function() {
