@@ -6,6 +6,6 @@ class PagesController < ApplicationController
     @front_page_pinned_rumors = Category.where("title LIKE ?", "%闢謠%").first
     @front_page_pinned_videos = Category.where("title LIKE ?", "%影音%").first
     @categories = Category.on.is_main
-    @sub_categories = Category.on.with_posts.is_subject.where(id: Post.on.pluck(:category_id))
+    @sub_categories = Category.where(id: Category.on.with_posts.is_subject)
   end
 end
