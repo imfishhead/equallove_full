@@ -1,4 +1,4 @@
-$(function(){
+$(window).on('load', function() {
 	
 	$(window).bind('resize', function() {
 		$nav = $('#nav').offset().top
