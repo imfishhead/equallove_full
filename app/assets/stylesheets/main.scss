@@ -41,6 +41,10 @@ h2 {
 		color: rgba(0,0,0,.45);
 		margin-left: 10px;
 	}
+
+	@media screen and ( max-width: 992px ) {
+		font-size: 28px;
+	}
 }
 h3 {
 	color: #FF4747;
@@ -254,7 +258,7 @@ footer {
 	}
 
 	.pop-up-content {
-		padding: 0 2.5%;
+		padding: 0 25px;
 		max-width: 800px;
 		margin-left: auto;
 		margin-right: auto;
