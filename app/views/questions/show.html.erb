@@ -1,7 +1,9 @@
 <%= render partial: "categories/partials/nav", locals: { id: @category.id, category: @category } %>
 <section class="article-show">
   <div class="pop-up-box">
-  	<h2><%= @question.title %></h2>
+  	<h2>
+  		問答
+		</h2>
     <%= render partial: "layouts/sub_nav", locals: { title: @question.category.title } %>
     <div class="pop-up-content">
 	    <p class="question-content">

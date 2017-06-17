@@ -35,8 +35,8 @@ header {
 			bottom: 5px;
 			left: 5px;
 			z-index: 2;
-			font-family: $p200;
-			font-weight: 200;
+			font-family: $p400;
+			font-weight: 400;
 			text-decoration: underline;
 			opacity: .7;
 			font-size: 14px;
@@ -50,8 +50,8 @@ header {
 		span {
 			display: inline-block;
 			font-size: 16px;
-			font-family: $p200;
-			font-weight: 200;
+			font-family: $p400;
+			font-weight: 400;
 			margin: 18px auto;
 		}
 	}
@@ -145,8 +145,8 @@ header {
 	}
 
 	p {
-		font-family: $p200;
-		font-weight: 200;
+		font-family: $p400;
+		font-weight: 400;
 		letter-spacing: .5px;
 		text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
 		font-size: 15px;

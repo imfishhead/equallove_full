@@ -25,9 +25,16 @@ body.nav-fixed {
 	padding-top: 50px
 }
 
+body.sub_nav-fixed {
+	#sub_nav { position: fixed; }
+	.pop-up-content {
+		padding-top: 40px!important;
+	}
+}
+
 * {
-	font-family: $p600;
-	font-weight: 600;
+	font-family: $p400;
+	font-weight: 400;
 }
 
 h2 {
@@ -73,10 +80,22 @@ footer {
 	h5, p, h4 {
 		font-size: 15px;
 		color: rgba(255,255,255,.5);
-		font-family: $p200;
-		font-weight: 200;
+		font-family: $p400;
+		font-weight: 400;
 	}
 	h4 { color: rgba(255,255,255,1);}
+}
+
+@media screen and (max-width: 992px) {
+	footer > div {
+		margin-top: 10px!important;
+		margin-bottom: 50px!important;
+	}
+	footer > div:nth-last-child(1) {
+		margin-top: 10px!important;
+		margin-bottom: 10px!important;
+	}
+	
 }
 
 .supportus {

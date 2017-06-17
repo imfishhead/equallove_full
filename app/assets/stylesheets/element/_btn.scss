@@ -40,6 +40,12 @@
   margin: 0 auto;
   background-image: linear-gradient(110deg, #ff5c5c, #ff9d00 51%, #ffd100);
   box-shadow: 0 8px 32px 0 rgba(255, 214, 34, 0.5);
+  transition: .3s ease;
+
+  &:hover {
+    transform: translateY(2px);
+    box-shadow: 0 6px 20px 0 rgba(255, 214, 34, 0.5);
+  }
 }
 
 .g-btn {
@@ -53,4 +59,10 @@
   border-radius: 100px;
   background-image: linear-gradient(114deg, #ffd61e, #8ed443);
   box-shadow: 0 8px 32px 0 rgba(255, 214, 34, 0.5);
+  transition: .3s ease;
+
+  &:hover {
+    transform: translateY(2px);
+    box-shadow: 0 6px 20px 0 rgba(255, 214, 34, 0.5);
+  }
 }
