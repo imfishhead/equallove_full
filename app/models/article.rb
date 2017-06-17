@@ -1,5 +1,5 @@
 class Article < Post
-  before_save :check_only_two_pinned
+  after_save :check_only_two_pinned
   validates :title,
             :admin_user_id,
             :description,
@@ -12,6 +12,8 @@ class Article < Post
   scope :pinned, -> { where(pinned: true) }
 
   def check_only_two_pinned
-    Article.pinned.order(updated_at: :desc).first.update(pinned: false) if Article.pinned.size > 2
+    (Article.all - Article.pinned.order(updated_at: :desc).first(2)).each do |article|
+      article.update(pinned: false)
+    end if Article.pinned.size > 2 && pinned_changed? && pinned?
   end
 end

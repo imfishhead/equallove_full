@@ -2,9 +2,9 @@
 <section class="article-show">
   <div class="pop-up-box">
   	<h2>
-  		問答
+  		<%= @question.title %>
 		</h2>
-    <%= render partial: "layouts/sub_nav", locals: { title: @question.category.title } %>
+    <%= render partial: "layouts/sub_nav", locals: { title: @question.category.parent.title } %>
     <div class="pop-up-content">
 	    <p class="question-content">
 	    	<%= raw @question.content %>

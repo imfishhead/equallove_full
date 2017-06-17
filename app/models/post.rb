@@ -9,6 +9,6 @@ class Post < ActiveRecord::Base
 	mount_uploader :main_pic, MainPicUploader
 
 	def only_one_post_pinned_per_category
-		category.articles.without(id).update_all(front_page_pinned: false)
+		category.articles.without(id).update_all(front_page_pinned: false) if front_page_pinned?
 	end
 end
