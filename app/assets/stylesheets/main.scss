@@ -286,7 +286,8 @@ footer {
 		margin-right: auto;
 
 		* {
-			width: 100%;
+			max-width: 100%;
+			width: auto;
 			text-align: left;
 			color: #444;
 		}
