@@ -2,7 +2,7 @@
 <section class="article-show">
   <div class="pop-up-box">
   	<h2><%= @video.title %></h2>
-    <%= render partial: "layouts/sub_nav", locals: { title: @video.category.title } %>
+    <%= render partial: "layouts/sub_nav", locals: { category: @video.category } %>
     <div class="pop-up-content">
 	    <!--  yotuber box -->
 	    <div class="youtube-box-main" style="margin-top: 30px;">

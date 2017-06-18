@@ -6,7 +6,7 @@
   		<%= image_tag @article.main_pic.url("regular") %>
   	</div>
   	<h2><%= @article.title %></h2>
-    <%= render partial: "layouts/sub_nav", locals: { title: @article.category.title } %>
+    <%= render partial: "layouts/sub_nav", locals: { category: @article.category } %>
     <div class="pop-up-content">
 	    <p>
 	    	<%= raw @article.content %>
