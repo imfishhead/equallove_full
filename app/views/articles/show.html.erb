@@ -1,3 +1,7 @@
+<% content_for :title, @article.title %>
+<% content_for :description, @article.description %>
+<% content_for :image, @article.main_pic.url("regular") %>
+
 <%= render partial: "categories/partials/nav", locals: { id: @category.id, category: @category } %>
 <section class="article-show">
   <div class="pop-up-box">
