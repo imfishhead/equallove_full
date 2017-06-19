@@ -25,7 +25,7 @@
           <%= article.description %>
         </p>
       </div>
-      <%= link_to "閱讀文章", article_path(article), class: "g-btn", target: "_blank" %>
+      <%= link_to "閱讀文章", article_path(article), class: "g-btn" %>
     </div>
     <% end %>
   </div>
@@ -70,7 +70,7 @@
       <div class="tab">
         <i class="fa fa-star" aria-hidden="true"></i>
         <div class="h3_2"><%= @front_page_pinned_newest.title %></div>
-        <%= link_to article_path(@front_page_pinned_newest.articles.on.first), target: "_blank" do %>
+        <%= link_to article_path(@front_page_pinned_newest.articles.on.first) do %>
         <div class="s2-article">
           <div class="img img-bg-cover" style="background-image: url(<%= @front_page_pinned_newest.articles.on.first.main_pic.url("regular") %>);"></div>
           <div class="text">
@@ -85,7 +85,7 @@
       <div class="tab">
         <i class="fa fa-newspaper-o" aria-hidden="true"></i>
         <div class="h3_2"><%= @front_page_pinned_news.title %></div>
-        <%= link_to article_path(@front_page_pinned_news.articles.on.first), target: "_blank" do %>
+        <%= link_to article_path(@front_page_pinned_news.articles.on.first) do %>
         <div class="s2-article">
           <div class="img img-bg-cover" style="background-image: url(<%= @front_page_pinned_news.articles.on.first.main_pic.url("regular") %>);"></div>
           <div class="text">
@@ -100,7 +100,7 @@
       <div class="tab">
         <i class="fa fa-check-square" aria-hidden="true"></i>
         <div class="h3_2"><%= @front_page_pinned_rumors.title %></div>
-        <%= link_to article_path(@front_page_pinned_rumors.articles.on.first), target: "_blank" do %>
+        <%= link_to article_path(@front_page_pinned_rumors.articles.on.first) do %>
         <div class="s2-article">
           <div class="img img-bg-cover" style="background-image: url(<%= @front_page_pinned_rumors.articles.on.first.main_pic.url("regular") %>);"></div>
           <div class="text">
@@ -115,7 +115,7 @@
       <div class="tab">
         <i class="fa fa-video-camera" aria-hidden="true"></i>
         <div class="h3_2"><%= @front_page_pinned_videos.title %></div>
-        <%= link_to video_path(@front_page_pinned_videos.videos.on.first), target: "_blank" do %>
+        <%= link_to video_path(@front_page_pinned_videos.videos.on.first) do %>
         <div class="s2-article">
           <div class="img img-bg-cover" style="background-image: url(<%= @front_page_pinned_videos.videos.on.first.main_pic.url("regular") %>);"></div>
           <div class="text">
@@ -129,7 +129,7 @@
     </div>
     <div class="s2-more">
       <span>我們還有更多精彩文章</span>
-      <%= link_to "閱讀所有文章", category_path(Category.first), class: "og-btn", target: "_blank" %>
+      <%= link_to "閱讀所有文章", category_path(Category.first), class: "og-btn" %>
     </div>
   </div>
 </section>
@@ -312,7 +312,7 @@
       <%= category.title %>
       <div>
         共<span><%= category.questions.size %></span>篇文章
-        <%= link_to "閱讀全部", category_path(category.parent, anchor: "category-#{category.id}"), target: "_blank" %>
+        <%= link_to "閱讀全部", category_path(category.parent, anchor: "category-#{category.id}") %>
       </div>
     </h3>
     <div class="s4-faqs flex-jfs-nw-">
@@ -324,7 +324,7 @@
         <p>
           <%= question.content %>
         </p>
-        <%= link_to "閱讀更多", question_path(question), class: "s4-faq-more-btn", target: "_blank" %>
+        <%= link_to "閱讀更多", question_path(question), class: "s4-faq-more-btn" %>
       </div>
       <% end %>
     </div>
