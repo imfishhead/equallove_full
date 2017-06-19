@@ -4,5 +4,7 @@ class Question < Post
 						:content,
 						:on,
 						:category_id,
-						presence: true
+						presence: true,
+            unless: Proc.new { |question| !question.on? }
+
 end

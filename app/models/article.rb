@@ -7,7 +7,8 @@ class Article < Post
             :on,
             :main_pic,
             :category_id,
-            presence: true
+            presence: true,
+            unless: Proc.new { |article| !article.on? }
 
   scope :pinned, -> { where(pinned: true) }
 

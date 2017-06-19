@@ -6,5 +6,7 @@ class Video < Post
 						:main_pic,
 						:video,
 						:category_id,
-						presence: true
+						presence: true,
+						unless: Proc.new { |video| !video.on? }
+
 end

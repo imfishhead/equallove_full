@@ -202,3 +202,45 @@ zh-TW:
       block: "清單"
       grid: "格狀"
       blog: "部落格"
+  errors:
+    format: ! '%{attribute} %{message}'
+    messages:
+      email: 必須是合格Email
+      accepted: 必須是可被接受的
+      blank: 不能空白
+      present: 必須是空白
+      url: 必須是合格的網址
+      confirmation: 不符合確認值
+      empty: 不能留空
+      equal_to: 必須等於 %{count}
+      even: 必須是偶數
+      exclusion: 是被保留的關鍵字
+      greater_than: 必須大於 %{count}
+      greater_than_or_equal_to: 必須大於或等於 %{count}
+      inclusion: 沒有包含在列表中
+      invalid: 是無效的
+      less_than: 必須小於 %{count}
+      less_than_or_equal_to: 必須小於或等於 %{count}
+      not_a_number: 不是數字
+      not_an_integer: 必須是整數
+      odd: 必須是奇數
+      record_invalid: ! '校驗失敗: %{errors}'
+      restrict_dependent_destroy:
+        one: 由於 %{record} 需要此記錄，所以無法移除記錄
+        many: 由於 %{record} 需要此記錄，所以無法移除記錄
+      taken: 已經被使用
+      too_long:
+        one: 過長（最長是一個字）
+        other: 過長（最長是 %{count} 個字）
+      too_short:
+        one: 過短（最短是一個字）
+        other: 過短（最短是 %{count} 個字）
+      wrong_length:
+        one: 字數錯誤 (必須是一個字)
+        other: 字數錯誤 (必須是 %{count} 個字)
+      other_than: 不可以是 %{count} 個字
+    template:
+      body: 以下欄位發生問題：
+      header:
+        one: 有 1 個錯誤發生使得「%{model}」無法被儲存。
+        other: 有 %{count} 個錯誤發生使得「%{model}」無法被儲存。
