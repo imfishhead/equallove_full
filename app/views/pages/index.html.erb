@@ -337,7 +337,7 @@
         <%= link_to "閱讀全部", category_path(category.parent, anchor: "category-#{category.id}"), target: "_blank" %>
       </div>
     </h3>
-    <div class="s4-faqs flex-l3-m2-s1-jfs-nw-">
+    <div class="s4-faqs flex-jfs-nw-">
       <% category.questions.find_each do |question| %>
       <div class="s4-faq reveal">
         <h4>
