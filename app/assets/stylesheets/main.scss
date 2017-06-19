@@ -156,15 +156,17 @@ footer {
 
 	.article {
 		position: relative;
+		border: solid 1px #eeeeee;
 
 		.img {
-			position: absolute;
+			position: relative;
+			z-index: 2;
 			left: 0;
 			top: 0;
 			bottom: 0;
 			margin: auto;
-			width: 120px;
-		  height: 136px;
+			width: 100%;
+		  padding-top: 52.22%;
 		  border-radius: 4px;
 		  box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.15);
 		}
@@ -174,12 +176,22 @@ footer {
 			background-color: #fff;
 			border-radius: 4px;
 			padding: 15px;
-			padding-left: 60px;
 			margin: 0 0 0 auto;
 		  background-color: #ffffff;
-		  border: solid 1px #eeeeee;
-		  width: calc( 100% - 80px );
 		  min-height: 153px;
+		}
+
+		@media screen and (max-width: 768px) {
+			.img {
+				position: absolute;
+				padding-top: 0;
+				width: 120px;
+			}
+
+			.text {
+				padding-left: 140px;
+				min-height: 120px;
+			}
 		}
 
 		h2 {
@@ -290,6 +302,8 @@ footer {
 			width: auto;
 			text-align: left;
 			color: #444;
+			margin-left: 0;
+			margin-right: 0;
 		}
 
 		img {

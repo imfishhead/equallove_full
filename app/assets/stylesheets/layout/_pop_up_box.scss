@@ -1,7 +1,7 @@
 .pop-up {
   position: fixed;
   background: white;
-  z-index: 10;
+  z-index: 40;
   left: 0;
   max-width: 1100px;
   width: 80%;
@@ -10,13 +10,14 @@
   height: 90%;
   top: 30px;
   display: none;
-  box-shadow: 0px 4px 30px rgba(0,0,0,.3);
+  box-shadow: 0px 10px 30px rgba(0,0,0,.1);
+
+  h3 {
+    color: #444;
+  }
 }
 
 .pop-up-top {
-  max-height: 300px;
-  height: 20%;
-  background-image: linear-gradient(to bottom, #ffdba1, #ffaeae);
   .close-circle {
 	  box-shadow: 0px 2px 5px rgba(0,0,0,.3);
   	background-color: #fff;
@@ -49,10 +50,19 @@
 }
 
 .pop-up-box {
-	height: 80%;
+	height: calc(100% - 20px);
   padding-top: 60px;
   overflow: scroll;
   padding-bottom: 60px;
+}
+
+.pop-up-box {
+  -webkit-overflow-scrolling: touch;
+}
+
+.pop-up-box::-webkit-scrollbar {
+  height: 0px;
+  width: 0;
 }
 
 @media screen and (max-width:$breakpoint-small) {

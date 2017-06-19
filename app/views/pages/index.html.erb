@@ -499,8 +499,27 @@
 
     至於尤美女委員版本中的第1079-1條，是規範收出養機構與法院的評估與裁定過程，不得歧視收養人的性傾向與性別認同，同時需要增加多元性別的相關了解課程，並非反方所說的「霸王收養條款」。再次重申，現有的收出養規範完全沒有改變。</p>
   </div>
- <div data-show="5" class="pop-up-box flex-jc-">
-    <h3></h3>
-    <p class="pop-up-content"></p>
-  </div>
 </section>
+<script>
+  $(window).on('load', function() {
+    
+    $(window).bind('resize', function() {
+      $nav = $('#nav').offset().top
+    }).resize();
+
+    $(window).bind('scroll', function() {
+      $this_Top = $(this).scrollTop();
+      if ( $this_Top > $nav ) {
+        $('body').addClass('nav-fixed')
+      } else {
+        $('body').removeClass('nav-fixed')
+      }
+  　}).scroll();
+
+    $("#introduce-laws").click(function() {
+      $('html,body').animate({
+        scrollTop: $(".sec2-3").offset().top
+        }, 'slow');
+    })
+  })
+</script>
