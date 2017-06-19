@@ -1,6 +1,6 @@
 <% content_for :title, @video.title %>
 <% content_for :description, @video.description %>
-<% content_for :image, @video.main_pic %>
+<% content_for :image, @video.main_pic.url("regular") %>
 
 <%= render partial: "categories/partials/nav", locals: { id: @category.id, category: @category } %>
 <section class="article-show">
