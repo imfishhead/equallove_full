@@ -141,7 +141,6 @@
 		width: 240px;
 		text-align: center;
 		opacity: 1;
-		cursor: pointer;
 
 		&.active {
 			opacity: 1;
@@ -155,12 +154,16 @@
 		margin-bottom: 10px;
 		color: #444444;
 	}
+
+	a {
+		margin-top: 25px;
+	}
 }
+
 
 .s2-article {
 	border-radius: 3px;
   background-color: #ffffff;
-  margin-top: 25px;
   width: 265px;
 
 	.img {
