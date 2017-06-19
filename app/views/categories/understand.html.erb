@@ -5,6 +5,7 @@
       <h1><%= @category.title %></h1>
       <!-- sub_categories 是次分類  -->
       <% Category.where(id: Category.on.with_posts.is_subject).find_each do |sub_c| %>
+      <div id="category-<%= sub_c.id %>">
       <h5><%= sub_c.title %></h5>
         <div class="articles flex-l3-m2-s1-jfs-afs-">
           <!-- 這裡 for each 次分類底下的文章 -->
@@ -23,7 +24,18 @@
           </div>
           <% end %>
         </div>
+      </div>
       <% end %>
     </div>
   </section>
 </div>
+
+<script type="text/javascript">
+
+$(window).load(function() {
+  $('html,body').animate({
+    scrollTop: $(window.location.hash).offset().top - 100
+    }, 'slow');
+})
+
+</script>

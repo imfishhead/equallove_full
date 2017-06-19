@@ -334,7 +334,7 @@
       <%= category.title %>
       <div>
         共<span><%= category.questions.size %></span>篇文章
-        <%= link_to "閱讀全部", category_path(category.parent), target: "_blank" %>
+        <%= link_to "閱讀全部", category_path(category.parent, anchor: "category-#{category.id}"), target: "_blank" %>
       </div>
     </h3>
     <div class="s4-faqs flex-l3-m2-s1-jfs-nw-">
