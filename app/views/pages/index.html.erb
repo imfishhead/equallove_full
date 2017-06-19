@@ -31,29 +31,7 @@
   </div>
 </header>
 
-<nav id="nav">
-  <div class="nav-left flex-jfs-ac-">
-    <div class="logo">
-      <%= link_to root_path do %>
-        <%= image_tag "common/logo_h.svg" %>
-      <% end %>
-    </div>
-  </div>
-  <div class="nav-right flex-ac-jc-">
-    <% @categories.find_each do |category| %>
-      <%= link_to category.title, category_path(category), target: "_blank" %>
-    <% end %>
-  </div>
-  <div class="nav-right-mobile">
-    <div class="nav-menu"></div>
-    <div class="nav-list">
-      <% @categories.find_each do |category| %>
-        <%= link_to category.title, category_path(category), target: "_blank" %>
-      <% end %>
-    </div>
-  </div>
-</nav>
-
+<%= render partial: "layouts/nav", locals: { id: nil, category: nil } %>
 
 <div class="equallove-bar flex-jc-ac-">
   <h1 class="pc">婚姻平權目前進度</h1>

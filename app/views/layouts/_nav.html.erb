@@ -7,6 +7,7 @@
     </div>
   </div>
   <div class="nav-right flex-ac-jc-">
+    <%= link_to "首頁", root_path %>
     <% Category.on.is_main.find_each do |category| %>
     <!-- 輪每一個分類，如果是現在這個頁面的就打 active  -->
       <%= link_to category.title, category_path(category), class: is_active(id, category) %>
@@ -15,6 +16,7 @@
   <div class="nav-right-mobile">
     <div class="nav-menu"></div>
     <div class="nav-list">
+      <%= link_to "首頁", root_path %>
       <!-- 輪每一個分類，如果是現在這個頁面的就打 active  -->
       <% Category.on.is_main.find_each do |category| %>
         <%= link_to category.title, category_path(category), class: is_active(id, category) %>

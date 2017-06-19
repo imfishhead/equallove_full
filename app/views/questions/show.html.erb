@@ -2,7 +2,7 @@
 <% content_for :description, @question.content %>
 <% content_for :image, asset_path('common/og-img.jpg') %>
 
-<%= render partial: "categories/partials/nav", locals: { id: @category.id, category: @category } %>
+<%= render partial: "layouts/nav", locals: { id: @category.id, category: @category } %>
 <section class="article-show">
   <div class="pop-up-box">
   	<h2>

@@ -2,7 +2,7 @@
 <% content_for :description, @video.description %>
 <% content_for :image, @video.main_pic.url("regular") %>
 
-<%= render partial: "categories/partials/nav", locals: { id: @category.id, category: @category } %>
+<%= render partial: "layouts/nav", locals: { id: @category.id, category: @category } %>
 <section class="article-show">
   <div class="pop-up-box">
   	<h2><%= @video.title %></h2>

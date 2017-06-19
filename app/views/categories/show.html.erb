@@ -1,5 +1,5 @@
 <div id="blog">
-  <%= render partial: "categories/partials/nav", locals: { id: params[:id], category: @category } %>
+  <%= render partial: "layouts/nav", locals: { id: params[:id], category: @category } %>
   <section class="main-blog" data-category="<%= @category.title %>">
     <div class="content">
       <h1><%= @category.title %></h1>
