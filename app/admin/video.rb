@@ -10,6 +10,7 @@ permit_params :title,
               :main_pic_cache,
 							:video,
 							:category_id,
+              :front_page_pinned,
 							:type
 #
 # or
@@ -32,6 +33,7 @@ permit_params :title,
     column :title
     column :description
     column :on
+    column :front_page_pinned
     column :video
     actions default: true
   end
@@ -53,6 +55,7 @@ permit_params :title,
           row :title
           row :description
           row :on
+          row :front_page_pinned
           row :video
         end
       end
@@ -71,6 +74,7 @@ permit_params :title,
       f.input :title
       f.input :category, as: :select2, include_blank: false, collection: Category.where("title LIKE ?", "%影音%"), input_html: { style: "width: 200px;" }
       f.input :on
+      f.input :front_page_pinned
       f.input :video, placeholder: '請輸入影片 youtube 嵌入的 iframe 語法，如：<iframe width=\'1280\' height=\'720\' src=\'https://www.youtube.com/embed......</iframe>\''.html_safe
       f.input :main_pic, as: :file, hint: f.object.main_pic.present? \
         ? image_tag(f.object.main_pic.url(:regular))
