@@ -1,4 +1,8 @@
 $(window).load(function() {
+	if($(".article-show h2").text().length > 24) {
+		$(".article-show h2").addClass("shrink");
+	}
+
 	$(".nav-menu").click(function() {
 		$(this).toggleClass('active');
 		$('.nav-list').toggleClass('active');
@@ -45,4 +49,3 @@ $(window).load(function() {
   sr.reveal('.s2-compare-card-box .reveal',500);
   sr.reveal('.s4-faq.reveal', { duration: 800 }, 100);
 });
-

@@ -8,10 +8,10 @@
 @import 'base/layout'; // landing page layout
 // ========= element =========
 @import 'element/btn'; // btn & calltoaction
-@import 'element/nav'; 
+@import 'element/nav';
 @import 'element/bar';
 // ========= layout =========
-@import 'layout/header'; 
+@import 'layout/header';
 @import 'layout/2';
 @import 'layout/3';
 @import 'layout/4';
@@ -44,7 +44,7 @@ h2 {
   font-weight: 300;
   color: #2f2f2f;
 
-	b { 
+	b {
 		color: rgba(0,0,0,.45);
 		margin-left: 10px;
 	}
@@ -98,7 +98,7 @@ footer {
 		margin-top: 10px!important;
 		margin-bottom: 10px!important;
 	}
-	
+
 }
 
 .supportus {
@@ -131,19 +131,19 @@ footer {
 }
 
 #blog {
-	#nav { 
-		position: fixed 
+	#nav {
+		position: fixed
 	}
-	
-	.main-blog { 
-		margin-top: 50px 
+
+	.main-blog {
+		margin-top: 50px
 	}
-	
-	h1 { 
-		font-size: 28px; 
+
+	h1 {
+		font-size: 28px;
 		color: #444;
 		padding-left: 10px;
-		opacity: .85; 
+		opacity: .85;
 	}
 
 	.content {
@@ -170,7 +170,7 @@ footer {
 		  border-radius: 4px;
 		  box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.15);
 		}
-		
+
 		.text {
 			text-align: left;
 			background-color: #fff;
@@ -234,7 +234,7 @@ footer {
 	}
 
 	.articles {
-		padding-bottom: 20px; 
+		padding-bottom: 20px;
 		box-shadow: 0 1px 0 0 rgba(0,0,0,.05);
 	}
 }
@@ -289,6 +289,10 @@ footer {
     margin-right: auto;
     margin: 20px auto;
     padding: 0 20px;
+	}
+
+	h2.shrink {
+		font-size: 24px;
 	}
 
 	.pop-up-content {
