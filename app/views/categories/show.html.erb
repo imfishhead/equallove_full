@@ -30,7 +30,22 @@
       <% else %>
         <!-- 如果沒有次分類就單純印出這個分類底下的所有文章  -->
         <div class="articles flex-l3-m2-s1-jfs-afs-">
-          <% @category.posts.on.find_each do |post| %>
+          <% if @pinned_post.present? %>
+            <%= link_to send("#{@pinned_post.type.downcase}_path", @pinned_post) do %>
+            <div class="article">
+              <div class="img img-bg-cover" style="background-image: url('<%= @pinned_post.main_pic.url("regular") %>');"></div>
+              <div class="text">
+                <h2>
+                  <%= @pinned_post.title.truncate(20) %>
+                </h2>
+                <p>
+                  <%= @pinned_post.description.try(:truncate, 30) %>
+                </p>
+              </div>
+            </div>
+            <% end %>
+          <% end %>
+          <% @posts.each do |post| %>
             <%= link_to send("#{post.type.downcase}_path", post) do %>
             <div class="article">
               <div class="img img-bg-cover" style="background-image: url('<%= post.main_pic.url("regular") %>');"></div>

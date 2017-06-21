@@ -13,6 +13,8 @@ class CategoriesController < ApplicationController
     redirect_to root_path unless @category.on?
     @categories = Category.on.is_main
     @has_subjects = @category.sub_categories.present?
+    @pinned_post = @category.posts.on.front_page_pinned.first
+    @posts = @pinned_post.present? ? @category.posts.on.without(@pinned_post.id) : @category.posts.on
     if @category.title.include? "了解"
       render "understand"
     end

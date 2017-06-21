@@ -4,9 +4,11 @@ class Post < ActiveRecord::Base
 	before_save :only_one_post_pinned_per_category
 	before_save :check_post_should_be_on_if_pinned
 
-	scope :on, -> { where(on: true) }
-	scope :front_page_pinned, -> { where(front_page_pinned: true) }
-	scope :without, -> id { where.not(id: id) if id }
+	default_scope { order(created_at: :desc) }
+
+	scope :on, -> { where(on: true).order(created_at: :desc) }
+	scope :front_page_pinned, -> { where(front_page_pinned: true).order(created_at: :desc) }
+	scope :without, -> id { where.not(id: id).order(created_at: :desc) if id }
 
 	mount_uploader :main_pic, MainPicUploader
 
