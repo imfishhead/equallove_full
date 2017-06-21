@@ -7,7 +7,7 @@ header {
 	max-height: 500px;
 	@media screen and (max-width: 992px) {
 		display: block;
-		max-height: 200%;
+		max-height: initial;
 		height: auto;
 	}
 
