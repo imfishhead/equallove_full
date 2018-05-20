@@ -7,6 +7,10 @@
     </div>
   </div>
   <div class="nav-right flex-ac-jc-">
+    <a href="http://beebee.equallove.tw/" target="_blank" style="margin-left: 0;">
+      <img style="width: 16px; vertical-align: middle; margin-top: -1px;" src="http://beebee.equallove.tw/img/header-logo.svg" alt="">
+      蜂潮行動
+    </a>
     <%= link_to "首頁", root_path %>
     <% Category.on.is_main.find_each do |category| %>
     <!-- 輪每一個分類，如果是現在這個頁面的就打 active  -->
@@ -16,6 +20,10 @@
   <div class="nav-right-mobile">
     <div class="nav-menu"></div>
     <div class="nav-list">
+      <a href="http://beebee.equallove.tw/" target="_blank" style="margin-left: 0;">
+        <img style="width: 16px; vertical-align: middle; margin-top: -1px;" src="http://beebee.equallove.tw/img/header-logo.svg" alt="">
+        蜂潮行動
+      </a>
       <%= link_to "首頁", root_path %>
       <!-- 輪每一個分類，如果是現在這個頁面的就打 active  -->
       <% Category.on.is_main.find_each do |category| %>
