@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170616105727) do
+ActiveRecord::Schema.define(version: 20190521221611) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -106,6 +106,9 @@ ActiveRecord::Schema.define(version: 20170616105727) do
     t.boolean  "pinned",            default: false
     t.integer  "admin_user_id"
     t.boolean  "front_page_pinned", default: false
+    t.string   "place"
+    t.datetime "post_time"
+    t.string   "phone"
   end
 
   create_table "settings", force: :cascade do |t|
