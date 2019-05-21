@@ -12,4 +12,7 @@ class PagesController < ApplicationController
     @categories = Category.on.is_main
     @sub_categories = Category.where(id: Category.on.with_posts.is_subject)
   end
+
+  def about
+  end
 end
