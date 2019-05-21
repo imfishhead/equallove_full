@@ -12,3 +12,5 @@
 !/log/.keep
 /tmp
 /public/uploads/tmp/
+
+.DS_Store
