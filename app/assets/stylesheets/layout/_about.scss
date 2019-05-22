@@ -1,0 +1,191 @@
+// Variables
+// Colors
+$primary-color: #2ed2e8;
+$secondary-color: #ffc239;
+$black-color: #3c3c3b;
+$red-color: #ea4848;
+$orange-color: #ea9000;
+$yellow-color: #fcc600;
+$green-color: #6cc600;
+$blue-color: #4890ea;
+$purple-color: #b448b4;
+$white-color: #ffffff;
+
+// line
+$grey-color: #dddddd;
+$title-color: #242424;
+
+
+$page-color: $orange-color;
+$title-color: #242424;
+
+.team {
+  .page-header {
+    background: $page-color;
+    margin-bottom: 0;
+  }
+
+  .team-area {
+    padding-top: 70px;
+    padding-bottom: 20px;
+
+    &:not(:first-child) {
+      border-top: solid 1px $grey-color;
+    }
+
+    @media (max-width: 480px) {
+      padding-top: 50px;
+    }
+  }
+
+  .section-title {
+    color: #afafaf;
+
+    @media (max-width: 480px) {
+      font-size: 20px;
+    }
+  }
+
+  .member {
+    padding: 50px 0 50px 50px;
+
+    &:not(:first-child) {
+      border-top: solid 1px $grey-color;
+    }
+
+    .member-avatar {
+      width: 200px;
+      min-width: 200px;
+      margin-right: 42px;
+    }
+
+    .member-info {
+      padding-top: 10px;
+    }
+
+    .member-name {
+      font-size: 23px;
+      font-weight: 500;
+      line-height: 0.87;
+      color: $title-color;
+      padding-right: 10px;
+    }
+
+    .member-job-title {
+      color: $page-color;
+      font-size: 14px;
+      letter-spacing: 0.3px;
+    }
+
+    .member-saying {
+      padding: 15px 0 10px;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    .member-experience {
+      opacity: 0.7;
+      font-size: 14px;
+      line-height: 1.5;
+      letter-spacing: 0.3px;
+      color: $title-color;
+    }
+
+    @media (max-width: 991px) {
+      padding: 50px 30px;
+    }
+
+    @media (max-width: 480px) {
+      padding: 30px 0;
+      flex-direction: column;
+
+      .member-avatar {
+        width: 100%;
+        min-width: 100%;
+        margin-right: 0;
+        padding: 0 28%;
+      }
+
+      .member-info {
+        padding-top: 20px;
+      }
+
+      .member-name {
+        padding-right: 0;
+        margin-bottom: 10px;
+      }
+
+      .member-saying {
+        padding: 20px 0 10px;
+      }
+
+      .member-info-head {
+        flex-direction: column;
+        align-items: center !important;
+      }
+    }
+  }
+
+  .website-dep {
+    &.team-area {
+      padding-bottom: 70px;
+    }
+
+    .member {
+      padding: 50px 0 0;
+      font-size: 16px;
+
+      span {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: normal;
+      }
+
+      .member-avatar {
+        margin-right: 92px;
+      }
+
+      .member-info {
+        span + span {
+          padding-left: 42px;
+        }
+      }
+    }
+  }
+
+  .donate {
+    .member {
+      &:not(:first-child) {
+        border-top: 0;
+      }
+
+      .member-avatar {
+        margin: 0 auto;
+      }
+
+      .member-info {
+        padding-top: 20px;
+        text-align: center;
+      }
+
+      .member-saying {
+        padding: 10px 0;
+      }
+
+      .member-name {
+        padding: 0;
+
+        a {
+          color: $page-color;
+          transition: 0.3s;
+
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+  }
+}
