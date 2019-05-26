@@ -6,7 +6,6 @@
         <!-- 如果沒有次分類就單純印出這個分類底下的所有文章  -->
       <div class="articles flex-l3-m2-s1-jfs-afs-">
         <% if @pinned_store.present? %>
-          <%= link_to send("#{@pinned_store.type.downcase}_path", @pinned_store) do %>
           <div class="article">
             <div class="img img-bg-cover" style="background-image: url('<%= @pinned_store.main_pic.url %>');"></div>
             <div class="text">
@@ -21,10 +20,8 @@
               </p>
             </div>
           </div>
-          <% end %>
         <% end %>
         <% @stores.each do |store| %>
-          <%= link_to send("#{store.type.downcase}_path", store) do %>
           <div class="article">
             <div class="img img-bg-cover" style="background-image: url('<%= store.main_pic.url %>');"></div>
             <div class="text">
@@ -39,7 +36,6 @@
               </p>
             </div>
           </div>
-          <% end %>
         <% end %>
       </div>
     </div>
