@@ -1,0 +1,77 @@
+<div id="blog">
+  <%= render partial: "layouts/nav", locals: { id: params[:id], category: @category } %>
+  <section class="main-blog" data-category="<%= @category.title %>">
+    <div class="content">
+      <h1><%= @category.title %></h1>
+
+      <% if @has_subjects %><!-- 如果有次分類的話就兩個 for 回圈顯示次分類以及底下的文章 -->
+        <!-- sub_categories 是次分類  -->
+        <% @category.sub_categories.on.find_each do |sub_c| %>
+        <h5><%= sub_c.title %></h5>
+          <div class="articles flex-l3-m2-s1-jfs-afs-">
+            <!-- 這裡 for each 次分類底下的文章 -->
+            <% sub_c.posts.on.find_each do |post| %>
+              <%= link_to send("#{post.type.downcase}_path", post) do %>
+              <div class="article">
+                <div class="img img-bg-cover" style="background-image: url('<%= post.main_pic.url("regular") %>');"></div>
+                <div class="text">
+                  <h2>
+                    <%= post.title.truncate(20) %>
+                  </h2>
+                  <p>
+                    <%= post.place %>
+                  </p>
+                  <p>
+                    <%= post.phone %>
+                  </p>
+                </div>
+              </div>
+              <% end %>
+            <% end %>
+          </div>
+        <% end %>
+      <% else %>
+        <!-- 如果沒有次分類就單純印出這個分類底下的所有文章  -->
+        <div class="articles flex-l3-m2-s1-jfs-afs-">
+          <% if @pinned_post.present? %>
+            <%= link_to send("#{@pinned_post.type.downcase}_path", @pinned_post) do %>
+            <div class="article">
+              <div class="img img-bg-cover" style="background-image: url('<%= @pinned_post.main_pic.url("regular") %>');"></div>
+              <div class="text">
+                <h2>
+                  <%= @pinned_post.title.truncate(20) %>
+                </h2>
+                <p>
+                  <%= @pinned_post.place %>
+                </p>
+                <p>
+                  <%= post.phone %>
+                </p>
+              </div>
+            </div>
+            <% end %>
+          <% end %>
+          <% @posts.each do |post| %>
+            <%= link_to send("#{post.type.downcase}_path", post) do %>
+            <div class="article">
+              <div class="img img-bg-cover" style="background-image: url('<%= post.main_pic.url("regular") %>');"></div>
+              <div class="text">
+                <h2>
+                  <%= post.title.truncate(20) %>
+                </h2>
+                <p>
+                  <%= post.place %>
+                </p>
+                <p>
+                  <%= post.phone %>
+                </p>
+              </div>
+            </div>
+            <% end %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </section>
+
+</div>
