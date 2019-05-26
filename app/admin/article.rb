@@ -90,7 +90,7 @@ permit_params :title,
         ? image_tag(f.object.main_pic.url(:regular))
         : content_tag(:span, "no main_pic page yet")
       f.input :main_pic_cache, as: :hidden
-      f.input :description, placeholder: "文章簡介，最多 30 字", input_html: { maxlength: 30 }
+      f.input :description, placeholder: "文章簡介"
       f.input :content, as: :ckeditor
     end
     f.actions
