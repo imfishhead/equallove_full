@@ -1,5 +1,6 @@
 class Category < ActiveRecord::Base
 	has_many :posts
+	has_many :stores
 	has_many :articles
 	has_many :videos
 	has_many :questions
