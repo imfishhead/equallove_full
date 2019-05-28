@@ -2,7 +2,6 @@ class Article < Post
   after_save :check_only_two_pinned
   validates :title,
             :admin_user_id,
-            :description,
             :content,
             :on,
             :main_pic,

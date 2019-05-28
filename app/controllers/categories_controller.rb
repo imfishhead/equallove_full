@@ -17,6 +17,10 @@ class CategoriesController < ApplicationController
     @posts = @pinned_post.present? ? @category.posts.on.without(@pinned_post.id) : @category.posts.on
     if @category.title.include? "了解"
       render "understand"
+    elsif @category.title.include? "友善店家"
+      @pinned_store = @category.stores.on.front_page_pinned.first
+      @stores = @pinned_store.present? ? @category.stores.on.without(@pinned_store.id) : @category.stores.on
+      render "store"
     end
   end
 
