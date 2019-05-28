@@ -1,4 +1,3 @@
-// Variables
 // Colors
 $primary-color: #2ed2e8;
 $secondary-color: #ffc239;
@@ -15,6 +14,197 @@ $white-color: #ffffff;
 $grey-color: #dddddd;
 $title-color: #242424;
 
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-backface-visibility: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  line-height: 1;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+p {
+  font-size: 16px;
+}
+
+span {
+  font-size: 15px;
+}
+
+@media (max-width: 575.98px) {
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+}
+
+a {
+  word-break: break-all;
+
+  &:focus,
+  &:active,
+  &:hover {
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+  }
+
+  &.has-arrow {
+    position: relative;
+    padding-right: 15px;
+
+    &:hover {
+      i {
+        right: -5px;
+      }
+    }
+
+    i {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: inline-block;
+      transform: scale(0.5) translateY(2px);
+      color: rgba($black-color, 0.5);
+      transition: 0.3s;
+    }
+  }
+}
+
+.btn,
+button {
+  &:focus {
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+body {
+  overflow: scroll;
+  overflow-x: hidden;
+  position: relative;
+  line-height: 1;
+  letter-spacing: 0.5px;
+  color: $black-color;
+  font-family: 'Roboto', 'PingFang TC', 'Microsoft JhengHei', 'Microsoft YaHei', sans-serif;
+  min-height: 100vh;
+  background: $white-color;
+
+  &.is-scrolling {
+    @media (min-width: 992px) {
+      header {
+        nav.navbar {
+          height: 70px;
+        }
+
+        .navbar-expand-lg {
+          .navbar-nav {
+            .nav-item {
+              line-height: 70px;
+            }
+
+            .nav-link {
+              height: 70px;
+              line-height: 70px;
+            }
+          }
+        }
+
+        .navbar-brand {
+          img {
+            height: 50px;
+          }
+        }
+      }
+    }
+  }
+
+  &::-webkit-scrollbar {
+    width: 0; /* remove scrollbar space */
+    background: transparent; /* optional: just make scrollbar invisible */
+  }
+
+  /* optional: show position indicator in red */
+  &::-webkit-scrollbar-thumb {
+    background: #ff0000;
+  }
+}
+
+// Override Bootstrap
+// Container
+@media (min-width: 1199.98px) {
+  .container {
+    max-width: 1155px;
+    padding: 0 10px;
+  }
+
+  .row {
+    margin: 0 -10px;
+  }
+
+  [class*="col-"] {
+    padding: 0 10px;
+
+    &[class*="col-form"] {
+      padding: 0;
+    }
+  }
+}
+
+.no-gutters {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.no-gutters > .col,
+.no-gutters > [class*="col-"] {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+// Override mobile container padding
+@media (max-width: 575.98px) {
+  .container, .container-fluid {
+    padding-right: 30px;
+    padding-left: 30px;
+
+    .row {
+      margin: 0;
+    }
+
+    [class*="col-"] {
+      padding: 0;
+    }
+  }
+}
+
+// Variables
 
 $page-color: $orange-color;
 $title-color: #242424;

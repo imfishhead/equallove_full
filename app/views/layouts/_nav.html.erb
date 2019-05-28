@@ -41,24 +41,9 @@
       </div>
     </div>
     <%= link_to "友善店家", '/categories/17' %>
-    <div class="dropdown-link">
-      <span class="text">關於我們</span>
-      <div class="dropdown-box" style="width: 125px;">
-        <a href="https://drive.google.com/file/d/1FBtJE9xSXHgVhC_2fj3agpj66Vjqlq9m/view?fbclid=IwAR20BLR5sGCNo1N0iJE9RBEbaCO04PgtuUKEWxSrFx1hc3EA-rsjEtjfVYY" target="_blank" class="active">
-          誕生故事
-        </a>
-        <a href="/about" target="_blank" class="<%= is_active('大事記') %>">
-          大事記
-        </a>
-        <a href="/about" target="_blank" class="<%= is_active('執行團隊') %>">
-          執行團隊
-        </a>
-      </div>
-    </div>
-    <%# Category.on.is_main.find_each do |category| %>
-    <!-- 輪每一個分類，如果是現在這個頁面的就打 active  -->
-      <%#= link_to category.title, category_path(category), class: is_active(id, category) %>
-    <%# end %>
+    <a href="/about" target="_blank" class="<%= is_active('關於我們') %>">
+      關於我們
+    </a>
   </div>
   <div class="nav-right-mobile">
     <div class="nav-menu"></div>
@@ -68,10 +53,48 @@
         蜂潮行動
       </a>
       <%= link_to "首頁", root_path %>
-      <!-- 輪每一個分類，如果是現在這個頁面的就打 active  -->
-      <% Category.on.is_main.find_each do |category| %>
-        <%= link_to category.title, category_path(category), class: is_active(category) %>
-      <% end %>
+      <div class="m-dropdown-link">
+        <span class="text">最新消息</span>
+        <div class="m-dropdown-box" >
+          <a href="/categories/1" target="_blank" class="<%= is_active('最新消息') %>">
+            最新消息
+          </a>
+          <a href="/categories/2" target="_blank" class="<%= is_active('新聞稿') %>">
+            新聞稿
+          </a>
+          <a href="/categories/4" target="_blank" class="<%= is_active('影音紀錄') %>">
+            影音紀錄
+          </a>
+        </div>
+      </div>
+      <div class="m-dropdown-link">
+        <span class="text">同婚知識</span>
+        <div class="m-dropdown-box" >
+          <a href="/categories/3" target="_blank" class="<%= is_active('闢謠專區') %>">
+            闢謠專區
+          </a>
+          <a href="" target="_blank" class="<%= is_active('了解婚姻平權') %>">
+            了解婚姻平權
+          </a>
+          <a href="/categories/16" target="_blank" class="<%= is_active('愛教會我們的事') %>">
+            愛教會我們的事
+          </a>
+        </div>
+      </div>
+      <%= link_to "友善店家", '/categories/17' %>
+      <a href="/about" target="_blank" class="<%= is_active('關於我們') %>">
+        關於我們
+      </a>
     </div>
   </div>
 </nav>
+<script>
+  $('.m-dropdown-link').click(function() {
+    if ($(this).hasClass('active')) {
+      $(this).removeClass('active');
+    } else {
+      $('.m-dropdown-link.active').removeClass('active');
+      $(this).addClass('active');
+    }
+  })
+</script>
