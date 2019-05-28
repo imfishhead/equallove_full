@@ -10,7 +10,7 @@ class CategoriesController < ApplicationController
   # GET /categories/1
   # GET /categories/1.json
   def show
-    redirect_to root_path unless @category.on?
+    redirect_to root_path and return unless @category.on?
     @categories = Category.on.is_main
     @has_subjects = @category.sub_categories.present?
     @pinned_post = @category.posts.on.front_page_pinned.first
