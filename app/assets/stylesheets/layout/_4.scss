@@ -54,6 +54,7 @@
 }
 
 .s4-faqs {
+	margin-bottom: 60px;
 	overflow-x: auto;
 	-webkit-overflow-scrolling: touch;
 }
@@ -130,7 +131,7 @@
 	width: 120px;
 	line-height: 30px;
 	border-radius: 30px;
-	margin: 10px auto 0;
+	text-align: left;
 	opacity: .7;
 	font-family: $p400;
 	font-weight: 400;
