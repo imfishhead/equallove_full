@@ -141,7 +141,6 @@ footer {
 	}
 
 	h1 {
-		display: none;
 		font-size: 28px;
 		color: #444;
 		padding-left: 10px;
@@ -218,6 +217,10 @@ footer {
 }
 
 #blog.blog-understand {
+	h1 {
+		display: none;
+	}
+
 	h5 {
 		font-size: 28px;
 		color: #444;
