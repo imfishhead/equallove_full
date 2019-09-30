@@ -125,8 +125,9 @@
 }
 
 .sec2-2 {
-	background-color: #f5f5f5;
 	text-align: center;
+	min-height: 0;
+	background-color: #fefccb;
 
 	.content {
 		padding: 8% 25px;
@@ -142,6 +143,12 @@
 		text-align: center;
 		opacity: 1;
 
+		.h3_2 {
+			color: #ff9a26;
+			text-align: left;
+			font-size: 14px;
+		}
+
 		&.active {
 			opacity: 1;
 
@@ -156,7 +163,7 @@
 	}
 
 	a {
-		margin-top: 25px;
+		margin-top: 9px;
 	}
 }
 
