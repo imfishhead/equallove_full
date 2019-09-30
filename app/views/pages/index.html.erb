@@ -115,6 +115,7 @@
         <div class="s2-article">
           <div class="img img-bg-cover" style="background-image: url(<%= @pinned_video.main_pic.url("regular") %>);"></div>
           <div class="text">
+            <div class="s2-a-date"></div>
             <h4><%= @pinned_video.title %></h4>
             <p><%= @pinned_video.description %></p>
           </div>
@@ -131,27 +132,27 @@
 </section>
 <section class="sec2-3 flex-ac-jc-">
   <div class="content">
-    <h2>臺灣為什麼要修民法</h2>
+    <h2>同婚專法上路，三大重點告訴你</h2>
     <div class="s2-icons flex-l3-m1-">
       <div class="icon">
-        <%= image_tag "common/icon/why-1.svg" %>
-        <h4>專法曠日廢時，人權無法等待</h4>
+        <%= image_tag "common/icon/01-1.png" %>
+        <h4>遵守憲法，也尊重公投結果</h4>
         <p>
-          修繕民法三條文（971-1條、972條、1079-1條）便能保障同志伴侶權益。另訂專法不僅曠日廢時，更需耗費龐大司法資源。
+          大法官已經說明，憲法應該要保障同志有與異性戀相同的婚姻自由；在2018年底的公投結果，則限縮了修法的形式，因此才會通過專法，以專法形式保障同性婚姻相關權益。
         </p>
       </div>
       <div class="icon">
-        <%= image_tag "common/icon/why-2.svg" %>
-        <h4>民法不修，歧視不休</h4>
+        <%= image_tag "common/icon/01-2.png" %>
+        <h4>同性異性，都可以「結婚登記」</h4>
         <p>
-          憲法第七條曰「人生而平等」，這也是制定所有法律的準則，修改民法讓所有人能平等適用，讓台灣的民主社會更多元包容。
+          根據釋字第748號解釋，大法官認為同志也可以「成立具有親密性及排他性之永久結合關係」；而根據通過的748施行法第4條，成立關係就是到戶政事務所進行「結婚登記」。
         </p>
       </div>
       <div class="icon">
-        <%= image_tag "common/icon/why-3.svg" %>
-        <h4>專法反而製造更多價值衝突</h4>
+        <%= image_tag "common/icon/01-3.png" %>
+        <h4>準用民法，權利義務大致相同</h4>
         <p>
-          德國因同志專法而引發超過300件以上官司，至今仍等待審理，浪費更多社會與司法成本。
+          雖然專法的與民法婚姻的規定仍有部分落差，但不管是日常家務代理、婚姻關係終止、彼此間的權利義務關係，都準用民法及其他法規，權利義務大致與異性婚姻相同。
         </p>
       </div>
     </div>
@@ -209,92 +210,32 @@
   </div>
 </section>
 <section class="sec2">
+  <div class="bg">
+    <%= image_tag "common/icon/background.png" %>
+  </div>
   <div class="content">
-    <h2>2016 版婚姻平權法案四大重點</h2>
-    <p>
-      2016 年通過立法院委員會初審的婚姻平權法案是以婚姻平權大平台與尤美女委員及辦公室共同研議所提出的民法修正草案（俗稱婚姻平權）為主，在國民黨、民進黨、時代力量等跨黨派委員的認真審議下通過，內容只有五條，讓我們解釋給你聽～
-    </p>
+    <h2>同志可以結婚之後，還可以努力的倡議方向</h2>
     <div class="s2-icons flex-l4-m2-jsb-">
       <div data-pop="1" class="reveal s2-icon pop-btn">
-        <%= image_tag "common/icon/icon-08.svg" %>
-        <h3>只修五條超簡單</h3>
+        <%= image_tag "common/icon/02-1.png" %>
+        <h3>跨國婚姻</h3>
+        <p>
+          礙於法律限制，目前台灣同志的只能跟其他26個同婚合法化國家締結跨國婚姻。未來，我們希望愛無國界，沒有限制。
+        </p>
       </div>
       <div data-pop="2" class="reveal s2-icon pop-btn">
-        <%= image_tag "common/icon/icon-09.svg" %>
-        <h3>傳統稱謂全保留</h3>
+        <%= image_tag "common/icon/02-2.png" %>
+        <h3>子女權益</h3>
+        <p>
+          同志家庭目前僅能收養配偶「親生」之子女，而不包括收養的子女，盼往後法律能讓同志家庭可以收養對方的養子女，或再婚後共同收養孩子。
+        </p>
       </div>
       <div data-pop="3" class="reveal s2-icon pop-btn">
-        <%= image_tag "common/icon/icon-10.svg" %>
-        <h3>婚姻規範都相同</h3>
-      </div>
-      <div data-pop="4" class="reveal s2-icon pop-btn">
-        <%= image_tag "common/icon/icon-11.svg" %>
-        <h3>兒童權益不退讓</h3>
-      </div>
-    </div>
-    <div class="s2-compare">
-      <div class="s2-compare-card flex-afs-nw-jfs-">
-        <div class="text">
-          <h4>
-            <div class="icon g">
-              <i class="fa fa-plus" aria-hidden="true"></i>
-            </div>
-            新增條文：
-          </h4>
-          <p class="sd">
-            第 971 條之 1 <br>異性或同性之婚姻當事人，平等適用本法及其他法規所定關於夫妻、配偶之規定。<br>
-            異性或同性配偶，平等適用本法及其他法規所定關於父母子女、親屬之規定。<br>
-            但本法第一千零六十三條以異性配偶為限。
-          </p>
-        </div>
-      </div>
-      <div class="s2-compare-card-box flex-l1-m1-">
-        <div class="reveal s2-compare-card flex-afs-nw-jfs-">
-          <div class="text">
-            <h4>
-              <div class="icon">
-                <i class="fa fa-pencil" aria-hidden="true"></i>
-              </div>
-              修正條文
-            </h4>
-            <p>
-              第 972 條<br>
-              婚約應由男女當事人自行訂定。<br>
-              <b style="margin-left: 0;">同性婚約，應由雙方當事人自行訂定。</b><br>
-              <span>原：婚約應由男女當事人自行訂定。</span>
-            </p>
-          </div>
-        </div>
-        <div class="reveal s2-compare-card flex-afs-nw-jfs-">
-          <div class="text">
-            <p>
-              第 973 條<br>
-              未滿<b>十七</b>歲者，不得訂定婚約。
-              <span>原：男未滿十七歲，女未滿十五歲者，不得訂定婚約。</span>
-            </p>
-          </div>
-        </div>
-        <div class="reveal s2-compare-card flex-afs-nw-jfs-">
-          <div class="text">
-            <p>
-              第 980 條<br>
-              未滿<b>十八</b>歲者，不得結婚。<br>
-              <span>原：男未滿十八歲，女未滿十六歲者，不得結婚。</span>
-            </p>
-          </div>
-        </div>
-        <div class="reveal s2-compare-card flex-afs-nw-jfs-">
-          <div class="text">
-            <p>
-              第 1079 條之 1<br>
-              法院為未成年人被收養之認可時，應依養子女最佳利益為之。<br>
-              <b style="margin-left: 0;">
-                法院為前項之認可時，不得以收養者之性別、性傾向、性別認同、性別特質等為理由，而為歧視之對待。
-              </b>
-              <span>原：法院為未成年人被收養之認可時，應依養子女最佳利益為之。</span>
-            </p>
-          </div>
-        </div>
+        <%= image_tag "common/icon/02-3.png" %>
+        <h3>人工生殖</h3>
+        <p>
+          雖台灣人工生殖技術進步到吸引外籍人士來台求子，但目前法規仍僅限於異性夫妻，未來期盼能夠開放同志家庭也能使用。
+        </p>
       </div>
     </div>
   </div>

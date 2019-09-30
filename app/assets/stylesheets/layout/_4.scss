@@ -17,7 +17,6 @@
 	font-size: 28px;
 	margin-bottom: 	10px;
 	padding-bottom: 10px;
-	box-shadow: 0 1px 0 0 rgba(0,0,0,.1);
 
 	div {
 		position: absolute;
@@ -91,6 +90,7 @@
 	}
 }
 .s4-faq p {
+	display: none;
 	position: relative;
 	padding-left: 20px;
 	font-size: 15px;
@@ -124,8 +124,8 @@
 .s4-faq-more-btn {
 	position: absolute;
 	color: #ff9f00!important;
-	bottom: 15px;
-	left: 0;
+	bottom: 8px;
+	left: 20px;
 	right: 0;
 	width: 120px;
 	line-height: 30px;
@@ -135,6 +135,7 @@
 	font-family: $p400;
 	font-weight: 400;
 	transition: .3s ease;
+	font-size: 14px;
 	&:hover {
 		opacity: 1;
 	}

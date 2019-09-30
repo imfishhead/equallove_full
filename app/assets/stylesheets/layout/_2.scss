@@ -10,6 +10,20 @@
 }
 
 .sec2 {
+	position: relative;
+
+	.bg {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+
+		img {
+			width: 100%;
+		}
+	}
+
 	.content>p {
 		max-width: 550px;
 		font-size: 15px;
