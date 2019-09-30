@@ -68,7 +68,6 @@
     <div class="s2-tabs flex-l4-m2-s1-">
       <% if @category_newest.on? && @pinned_newest.present? %>
       <div class="tab">
-        <i class="fa fa-star" aria-hidden="true"></i>
         <div class="h3_2"><%= @category_newest.title %></div>
         <%= link_to article_path(@pinned_newest) do %>
         <div class="s2-article">
@@ -83,7 +82,6 @@
       <% end %>
       <% if @category_news.on? && @pinned_news.present? %>
       <div class="tab">
-        <i class="fa fa-newspaper-o" aria-hidden="true"></i>
         <div class="h3_2"><%= @category_news.title %></div>
         <%= link_to article_path(@pinned_news) do %>
         <div class="s2-article">
@@ -98,7 +96,6 @@
       <% end %>
       <% if @category_rumor.on? && @pinned_rumor.present? %>
       <div class="tab">
-        <i class="fa fa-check-square" aria-hidden="true"></i>
         <div class="h3_2"><%= @category_rumor.title %></div>
         <%= link_to article_path(@pinned_rumor) do %>
         <div class="s2-article">
@@ -113,7 +110,6 @@
       <% end %>
       <% if @category_video.on? && @pinned_video.present? %>
       <div class="tab">
-        <i class="fa fa-video-camera" aria-hidden="true"></i>
         <div class="h3_2"><%= @category_video.title %></div>
         <%= link_to video_path(@pinned_video) do %>
         <div class="s2-article">
