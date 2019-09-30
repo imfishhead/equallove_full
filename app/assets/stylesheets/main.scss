@@ -245,9 +245,23 @@ footer {
 	}
 }
 
-.index-page-pop-up{
+.index-page-pop-up {
 	.pop-up-content {
 		width: 80%;
+
+		& > div {
+			padding: 30px 42px;
+			border-radius: 2px;
+			margin-bottom: 15px;
+			color: #fff;
+
+			h3 { font-size: 28px; color: #fff; margin-bottom: 20px }
+			div { font-size: 15px; line-height: 1.4 }
+
+			&.green { background-color: #32a13f }
+			&.orange { background-color: #ffc533 }
+			&.blue { background-color: #004491 }
+		}
 	}
 }
 .pop-up-box {
