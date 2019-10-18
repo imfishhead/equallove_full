@@ -163,6 +163,11 @@ section {
 		font-family: $p500;
 		font-weight: 500;
 		opacity: 1;
+		font-size: 16px;
+
+		&.no-link {
+			cursor: auto;
+		}
 	}
 
 	.f-block p {
@@ -175,12 +180,8 @@ section {
 		margin-top: 20px;
 
 		a {
-			margin: 0 5px 0 0;
-			flex: 0 0 25px;
-		}
-
-		a.yb {
-			flex: 0 0 35px;
+			margin: 0 12px 0 0;
+			flex: 0 0 22px;
 		}
 
 		img {
