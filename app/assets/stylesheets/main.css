@@ -890,7 +890,10 @@ header {
     .s2-tabs .tab .h3_2 {
       color: #ff9a26;
       text-align: left;
-      font-size: 14px; }
+      font-size: 14px;
+      width: 265px;
+      display: block;
+      margin: 0 auto; }
     .s2-tabs .tab.active {
       opacity: 1; }
       .s2-tabs .tab.active i {
