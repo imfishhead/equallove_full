@@ -1983,6 +1983,9 @@ section p {
     transition: 0.3s; }
     .sec-addition .cta-button:hover {
       opacity: 0.7; }
+  @media (max-width: 575.98px) {
+    .sec-addition .cta-button {
+      bottom: 25px; } }
 
 .question-content {
   white-space: pre-line; }

@@ -488,6 +488,12 @@ section {
 			opacity: 0.7;
 		}
 	}
+
+	@media (max-width: 575.98px) {
+		.cta-button {
+			bottom: 25px;
+		}
+	}
 }
 
 .question-content {
