@@ -219,6 +219,12 @@ $title-color: #242424;
     padding-top: 70px;
     padding-bottom: 20px;
 
+    .other-team {
+      .member-experience {
+        padding-top: 15px;
+      }
+    }
+
     &:not(:first-child) {
       border-top: solid 1px $grey-color;
     }

@@ -1541,6 +1541,8 @@ body {
 .team .team-area {
   padding-top: 70px;
   padding-bottom: 20px; }
+  .team .team-area .other-team .member-experience {
+    padding-top: 15px; }
   .team .team-area:not(:first-child) {
     border-top: solid 1px #dddddd; }
   @media (max-width: 480px) {
