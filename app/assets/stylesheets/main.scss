@@ -210,6 +210,10 @@ section {
 				display: inline-block;
 				transform: scale(0.5) translateY(2px);
 				transition: 0.3s;
+				
+				&::before {
+					font-family: 'fontawesome';
+				}
 			}
 
 			&:hover {
