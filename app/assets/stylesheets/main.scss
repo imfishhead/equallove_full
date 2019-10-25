@@ -52,11 +52,32 @@ h2 {
 
 	@media screen and ( max-width: 992px ) {
 		font-size: 28px;
+		line-height: 1.25;
+
+		.mobile-big {
+			font-size: 42px;
+		}
 	}
 }
+
+.show-on-mobile {
+	display: none;
+}
+
+@media screen and ( max-width: 575.98px ) {
+	h1, h2, h3, h4, h5, h6 {
+		line-height: 1.25;
+	}
+
+	.show-on-mobile {
+		display: block;
+	}
+}
+
 h3 {
 	color: #FF4747;
 }
+
 section {
 	p {
 		line-height: 1.7;
@@ -343,7 +364,8 @@ section {
 	.pop-up-box {
 		height: auto;
 		padding: 0;
-		max-height: 80vh;
+		max-height: 100vh;
+		overflow: auto;
 	}
 
 	.pop-up-content {
@@ -393,6 +415,9 @@ section {
 				position: initial;
 				float: right;
 				margin: 11px;
+				transform: none;
+				width: 30px;
+				height: 30px;
 			}
 		}
 
