@@ -21,9 +21,6 @@
 @import 'layout/pop_up_box';
 @import 'layout/about';
 
-// ========= font icon =========
-@import 'icon';
-
 body.nav-fixed {
 	#nav { position: fixed; }
 	padding-top: 50px
@@ -210,7 +207,7 @@ section {
 				display: inline-block;
 				transform: scale(0.5) translateY(2px);
 				transition: 0.3s;
-				
+
 				&::before {
 					font-family: 'fontawesome';
 				}
