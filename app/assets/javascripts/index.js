@@ -15,14 +15,14 @@ $(window).load(function() {
 
 	/// 婚姻平權進度條
 	$(".pop-btn").click(function() {
-		$("body").css("overflow", "hidden");
+		$("body").css("overflow", "hidden").addClass('is-open');
 		var index = $(this).attr("data-pop");
 		$(".pop-up").fadeIn(300);
 		$(".pop-up-box").fadeOut(0);
 		$(".pop-up-box[data-show=" + index + "]").fadeIn(0);
 		$(".close-circle").click(function() {
 			$(".pop-up").fadeOut(0);
-			$("body").css("overflow", "auto");
+			$("body").css("overflow", "auto").removeClass('is-open');
 		});
 	});
 
