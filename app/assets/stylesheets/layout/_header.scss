@@ -78,6 +78,10 @@ header {
 				height: auto;
 				padding: 50px 28px;
 			}
+
+			@media(max-width: 575.98px) {
+				flex-direction: column;
+			}
 		}
 	}
 
@@ -155,6 +159,12 @@ header {
 	.g-btn {
 		flex: 0 0 auto;
 		z-index: 1;
+	}
+
+	@media(max-width: 575.98px) {
+		.g-btn {
+			margin-top: 18px;
+		}
 	}
 }
 

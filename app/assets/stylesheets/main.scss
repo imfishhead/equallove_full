@@ -116,6 +116,10 @@ section {
 			margin-bottom: 30px;
 		}
 
+		@media screen and (max-width: 575.98px) {
+			flex: 1 1 auto;
+		}
+
 		div {
 			opacity: 0.7;
 		}
@@ -454,7 +458,7 @@ section {
 		}
 
 		.pop-up-box {
-			padding-top: 52px;
+			margin-top: 52px;
 			padding-bottom: 0;
 		}
 
