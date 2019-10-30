@@ -9,7 +9,7 @@
   		<div class="img-bg-cover" style="background-image: url('<%= @article.main_pic.url("regular")%>') "></div>
   		<%= image_tag @article.main_pic.url("regular") %>
   	</div>
-  	<%= render partial: "layouts/sub_nav", locals: { category: @article.category } %>
+  	<%= render partial: "layouts/cat_nav", locals: { category: @article.category } %>
   	<h2><%= @article.title %></h2>
     <div class="pop-up-content">
 	    <p>
