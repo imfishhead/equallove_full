@@ -9,8 +9,11 @@
   		<div class="img-bg-cover" style="background-image: url('<%= @article.main_pic.url("regular")%>') "></div>
   		<%= image_tag @article.main_pic.url("regular") %>
   	</div>
+  	<div class="category">
+        <%= link_to category.title, category_path(category) %>
+    	<div class="published-date"></div>
+    </div>
   	<h2><%= @article.title %></h2>
-    <%= render partial: "layouts/sub_nav", locals: { category: @article.category } %>
     <div class="pop-up-content">
 	    <p>
 	    	<%= raw @article.content %>
@@ -21,26 +24,6 @@
 <script>
 
   $(window).on('load', function() {
-    
-    $(window).bind('resize', function() {
-      $nav = $('#nav').offset().top
-      $sub_nav = $('#sub_nav').offset() ? $('#sub_nav').offset().top - 50 : 0
-    }).resize();
-
-    $(window).bind('scroll', function() {
-      $this_Top = $(this).scrollTop();
-      if ( $this_Top > $nav ) {
-        $('body').addClass('nav-fixed')
-      } else {
-        $('body').removeClass('nav-fixed')
-      }
-
-      if ( $this_Top > $sub_nav ) {
-        $('body').addClass('sub_nav-fixed')
-      } else {
-        $('body').removeClass('sub_nav-fixed')
-      }
-  　}).scroll();
 
     $("#introduce-laws").click(function() {
       $('html,body').animate({
