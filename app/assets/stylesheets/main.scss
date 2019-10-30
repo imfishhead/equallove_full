@@ -507,6 +507,7 @@ section {
     max-width: 750px;
     margin: 0 auto;
 		color: #1b1b1b;
+		line-height: normal;
 
 		&.shrink {
 			font-size: 24px;
@@ -514,14 +515,16 @@ section {
 
 		@media (max-width: 575.98px) {
 			padding: 0 20px;
+			font-size: 28px;
 		}
 	}
 
 	.category {
 		display: flex;
 		align-items: center;
-		margin: 8px auto 25px;
+		margin: 25px auto 8px;
 		max-width: 750px;
+		line-height: normal;
 
 		a {
 			font-size: 16px;
@@ -538,6 +541,14 @@ section {
 
 		@media (max-width: 575.98px) {
 			padding: 0 20px;
+			
+			a {
+				font-size: 14px;
+			}
+
+			.published-date {
+				font-size: 16px;
+			}
 		}
 	}
 
