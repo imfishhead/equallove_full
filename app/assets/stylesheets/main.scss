@@ -520,7 +520,8 @@ section {
 	.category {
 		display: flex;
 		align-items: center;
-		margin: 8px 0 25px;
+		margin: 8px auto 25px;
+		max-width: 750px;
 
 		a {
 			font-size: 16px;
@@ -533,6 +534,10 @@ section {
 			letter-spacing: 0.42px;
 			color: #fc4f4f;
 			font-family: 'Roboto', sans-serif;
+		}
+
+		@media (max-width: 575.98px) {
+			padding: 0 20px;
 		}
 	}
 
