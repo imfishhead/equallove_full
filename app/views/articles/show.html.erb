@@ -2,17 +2,13 @@
 <% content_for :description, @article.description %>
 <% content_for :image, @article.main_pic.url("regular") %>
 
-<%= render partial: "layouts/nav", locals: { id: @category.id, category: @category } %>
 <section class="article-show">
   <div class="pop-up-box">
   	<div class="header">
   		<div class="img-bg-cover" style="background-image: url('<%= @article.main_pic.url("regular")%>') "></div>
   		<%= image_tag @article.main_pic.url("regular") %>
   	</div>
-  	<div class="category">
-        <%= link_to category.title, category_path(category) %>
-    	<div class="published-date"></div>
-    </div>
+  	<%= render partial: "layouts/cat_nav", locals: { category: @article.category } %>
   	<h2><%= @article.title %></h2>
     <div class="pop-up-content">
 	    <p>
