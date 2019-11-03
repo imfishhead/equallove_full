@@ -15,9 +15,9 @@
               <div class="article">
                 <div class="img img-bg-cover" style="background-image: url('<%= post.main_pic.url("regular") %>');"></div>
                 <div class="text">
-                  <p class="post-date">
+                  <div class="post-date">
                     <%= (post.post_time || post.created_at).strftime('%B %d, %Y') %>
-                  </p>
+                  </div>
                   <h2>
                     <%= post.title.truncate(20) %>
                   </h2>
@@ -38,9 +38,9 @@
             <div class="article">
               <div class="img img-bg-cover" style="background-image: url('<%= @pinned_post.main_pic.url("regular") %>');"></div>
               <div class="text">
-                <p class="post-date">
+                <div class="post-date">
                   <%= (@pinned_post.post_time || @pinned_post.created_at).strftime('%B %d, %Y') %>
-                </p>
+                </div>
                 <h2>
                   <%= @pinned_post.title.truncate(20) %>
                 </h2>
@@ -56,9 +56,9 @@
             <div class="article">
               <div class="img img-bg-cover" style="background-image: url('<%= post.main_pic.url("regular") %>');"></div>
               <div class="text">
-                <p class="post-date">
+                <div class="post-date">
                   <%= (post.post_time || post.created_at).strftime('%B %d, %Y') %>
-                </p>
+                </div>
                 <h2>
                   <%= post.title.truncate(20) %>
                 </h2>

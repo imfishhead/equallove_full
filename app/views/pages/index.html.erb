@@ -73,6 +73,7 @@
         <div class="s2-article">
           <div class="img img-bg-cover" style="background-image: url(<%= @pinned_newest.main_pic.url("regular") %>);"></div>
           <div class="text">
+            <div class="post-date"><%= (@pinned_newest.post_time || @pinned_newest.created_at).strftime('%B %d, %Y') %></div>
             <h4><%= @pinned_newest.title %></h4>
             <p><%= @pinned_newest.description %></p>
           </div>
@@ -87,6 +88,7 @@
         <div class="s2-article">
           <div class="img img-bg-cover" style="background-image: url(<%= @pinned_news.main_pic.url("regular") %>);"></div>
           <div class="text">
+            <div class="post-date"><%= (@pinned_news.post_time || @pinned_news.created_at).strftime('%B %d, %Y') %></div>
             <h4><%= @pinned_news.title %></h4>
             <p><%= @pinned_news.description %></p>
           </div>
@@ -101,6 +103,7 @@
         <div class="s2-article">
           <div class="img img-bg-cover" style="background-image: url(<%= @pinned_rumor.main_pic.url("regular") %>);"></div>
           <div class="text">
+            <div class="post-date"><%= (@pinned_rumor.post_time || @pinned_rumor.created_at).strftime('%B %d, %Y') %></div>
             <h4><%= @pinned_rumor.title %></h4>
             <p><%= @pinned_rumor.description %></p>
           </div>
@@ -115,7 +118,7 @@
         <div class="s2-article">
           <div class="img img-bg-cover" style="background-image: url(<%= @pinned_video.main_pic.url("regular") %>);"></div>
           <div class="text">
-            <div class="s2-a-date"></div>
+            <div class="post-date"><%= (@pinned_video.post_time || @pinned_video.created_at).strftime('%B %d, %Y') %></div>
             <h4><%= @pinned_video.title %></h4>
             <p><%= @pinned_video.description %></p>
           </div>
