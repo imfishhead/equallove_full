@@ -328,6 +328,13 @@ section {
 		  min-height: 110px;
 		}
 
+		.post-date {
+			color: #fc4f4f;
+			font-size: 13px;
+			line-height: 1;
+			margin-bottom: 6px;
+		}
+
 		@media screen and (max-width: 768px) {
 			.img {
 				position: absolute;
