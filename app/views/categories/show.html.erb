@@ -39,7 +39,7 @@
               <div class="img img-bg-cover" style="background-image: url('<%= @pinned_post.main_pic.url("regular") %>');"></div>
               <div class="text">
                 <p class="post-date">
-                  <%= (post.post_time || post.created_at).strftime('%B %d, %Y') %>
+                  <%= (@pinned_post.post_time || @pinned_post.created_at).strftime('%B %d, %Y') %>
                 </p>
                 <h2>
                   <%= @pinned_post.title.truncate(20) %>
