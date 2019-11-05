@@ -1,4 +1,4 @@
 <div class="category">
         <%= link_to category.title, category_path(category) %>
-    	<div class="published-date"></div>
+    	<div class="published-date"><%= (article.post_time || article.created_at).strftime('%B %d, %Y') %></div>
 </div>
