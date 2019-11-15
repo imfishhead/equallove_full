@@ -320,6 +320,19 @@
 		border: solid 1px #f3f3f3;
 		background-color: #ffffff;
 		text-align: left;
+		transition: box-shadow 0.3s;
+
+		&.first {
+			margin-top: 100px;
+		}
+
+		&.no-pop .data-card-desc {
+			text-decoration: inherit;
+		}
+
+		&:hover {
+			box-shadow: 2px 2px 7px 0 rgba(0, 0, 0, 0.05);
+		}
 
 		h2 {
 			font-size: 28px;
@@ -328,10 +341,6 @@
 			text-align: left;
 			margin-top: 17px;
 			margin-bottom: 36px;
-		}
-
-		&.first {
-			margin-top: 100px;
 		}
 
 		@media screen and (max-width: 600px) {

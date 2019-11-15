@@ -305,6 +305,12 @@ section {
 		position: relative;
 		border: solid 1px #eeeeee;
 
+		&:hover {
+			.img {
+				box-shadow: none;
+			}
+		}
+
 		.img {
 			position: relative;
 			z-index: 2;
@@ -316,6 +322,7 @@ section {
 		  padding-top: 52.22%;
 		  border-radius: 4px;
 		  box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.15);
+			transition: box-shadow 0.3s;
 		}
 
 		.text {
