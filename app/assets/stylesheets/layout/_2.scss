@@ -199,12 +199,17 @@
   background-color: #ffffff;
   width: 265px;
 
+	&:hover img {
+		box-shadow: none;
+	}
+
 	.img {
 		width: 100%;
 		padding-top: 52.22%;
 		margin-bottom: 10px;
 		border-radius: 3px;
   	box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.15);
+		transition: box-shadow 0.3s;
 	}
 
 	.text {
