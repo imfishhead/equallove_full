@@ -32,7 +32,7 @@ gem "rails-settings-cached"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-gem 'carrierwave', '~> 1.0'
+gem 'carrierwave', '~> 1.3'
 gem "ckeditor"
 gem "mini_magick"
 gem "fog-aws"
